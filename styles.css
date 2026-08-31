@@ -75,13 +75,13 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 .marquee{overflow:hidden;padding:4px 0;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
   mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.marquee-track{display:flex;width:max-content;animation:marquee-ltr 44s linear infinite}
+.marquee-track{display:flex;width:max-content;animation:marquee-ltr 99s linear infinite}
 /* Dung margin-right thay cho gap de hai bo anh lap lai khop chinh xac 50% -> chay lien mach */
 .marquee img{flex:none;width:280px;height:280px;margin-right:16px;object-fit:cover;
   border-radius:var(--radius);border:1px solid var(--line);background:var(--bg-soft)}
 .marquee:hover .marquee-track{animation-play-state:paused}
 @keyframes marquee-ltr{from{transform:translateX(-50%)}to{transform:translateX(0)}}
-@media(max-width:760px){.marquee img{width:200px;height:200px;margin-right:12px}.marquee-track{animation-duration:32s}}
+@media(max-width:760px){.marquee img{width:200px;height:200px;margin-right:12px}.marquee-track{animation-duration:72s}}
 @media(prefers-reduced-motion:reduce){.marquee{overflow-x:auto}.marquee-track{animation:none}}
 
 /* Table */
