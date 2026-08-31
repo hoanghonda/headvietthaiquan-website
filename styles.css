@@ -45,6 +45,9 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 .grid-4{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+/* Hang co it xe: giu the rong bang cac hang khac, khong keo gian het chieu ngang */
+.grid-fixed{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.grid-fixed{grid-template-columns:repeat(3,1fr)}}
 
 /* Cards */
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:box-shadow .2s}
@@ -109,7 +112,7 @@ table.hours th{background:var(--bg-soft)}
   section{padding:36px 0}
   /* Luoi xe 2 cot thay vi 1 cot cho do trong trai */
   .grid{gap:12px}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-4,.grid-fixed{grid-template-columns:repeat(2,1fr)}
   .product .ph{height:130px;padding:8px}
   .product .info{padding:12px}
   html{scroll-padding-top:104px}
