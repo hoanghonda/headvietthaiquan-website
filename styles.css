@@ -28,7 +28,7 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 .hero h1{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;margin-bottom:14px}
 .hero p{max-width:640px;font-size:1.05rem;opacity:.95}
 .hero .cta-row{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent;font-family:inherit;cursor:pointer}
 .btn-white{background:#fff;color:var(--red)}
 .btn-white:hover{background:#f2f2f2}
 .btn-outline{border-color:#fff;color:#fff}
@@ -63,7 +63,8 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 .stars{color:#f5a623;font-weight:700}
 
 /* Product grid */
-.product{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center}
+.product{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:box-shadow .2s,transform .2s}
+a.product:hover{box-shadow:0 6px 24px rgba(0,0,0,.10);transform:translateY(-2px)}
 .product .ph{background:#fff;height:170px;display:flex;align-items:center;justify-content:center;color:#aaa;font-weight:700;font-size:.85rem;padding:10px;overflow:hidden}
 /* Khung ảnh xe chuẩn hoá theo LEAD 125: ảnh luôn canh giữa, cùng chiều cao khung.
    Ảnh nguồn của Honda có viền trắng thừa khác nhau nên chỉnh --zoom cho từng xe. */
@@ -86,6 +87,21 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 @keyframes marquee-ltr{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media(max-width:760px){.marquee img{width:200px;height:200px;margin-right:12px}.marquee-track{animation-duration:72s}}
 @media(prefers-reduced-motion:reduce){.marquee{overflow-x:auto}.marquee-track{animation:none}}
+
+/* Form dang ky de lai thong tin */
+.form-lead{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.form-lead .row{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:14px}
+.form-lead label{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+.form-lead .req{color:var(--red)}
+.form-lead input,.form-lead select,.form-lead textarea{width:100%;padding:11px 12px;border:1px solid var(--line);
+  border-radius:8px;font:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
+.form-lead textarea{min-height:88px;resize:vertical}
+.form-lead input:focus,.form-lead select:focus,.form-lead textarea:focus{border-color:var(--red);outline:2px solid rgba(204,0,0,.25);outline-offset:1px}
+.form-lead input:invalid:not(:placeholder-shown){border-color:var(--red)}
+.form-lead .hint{color:var(--gray);font-size:.85rem;margin-top:12px}
+.form-msg{border-radius:8px;padding:12px 16px;font-size:.93rem;margin-top:14px}
+.form-msg.ok{background:#e9f6ec;border:1px solid #b7dfb9;color:#1b5e20}
+.form-msg.err{background:#fff8e6;border:1px solid #f0dfb0;color:#7a5c00}
 
 /* Table */
 table.hours{width:100%;border-collapse:collapse;font-size:.93rem;margin:12px 0}
