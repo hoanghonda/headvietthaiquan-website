@@ -89,6 +89,22 @@ a.product:hover{box-shadow:0 6px 24px rgba(0,0,0,.10);transform:translateY(-2px)
 @media(max-width:760px){.marquee img{width:200px;height:200px;margin-right:12px}.marquee-track{animation-duration:72s}}
 @media(prefers-reduced-motion:reduce){.marquee{overflow-x:auto}.marquee-track{animation:none}}
 
+/* Bai viet tin tuc: 2 the song song (noi dung | video doc) */
+.bai-viet{display:grid;gap:24px;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:start}
+.bai-viet .noi-dung h2{font-size:1.12rem;margin:22px 0 8px}
+.bai-viet .noi-dung h2:first-child{margin-top:0}
+.bai-viet .noi-dung p{margin-bottom:12px;font-size:.97rem;line-height:1.75}
+.bai-viet .noi-dung ul{margin:0 0 14px 20px;font-size:.96rem;color:var(--gray)}
+.bai-viet .noi-dung li{margin-bottom:6px}
+.the-media{position:sticky;top:84px;padding:0;overflow:hidden}
+.the-media video,.the-media img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;background:#111}
+.the-media .chu-thich{padding:13px 18px 16px;font-size:.88rem;color:var(--gray)}
+.bai-meta{color:var(--gray);font-size:.88rem;margin-bottom:18px}
+@media(max-width:860px){
+  .bai-viet{grid-template-columns:1fr;gap:18px}
+  .the-media{position:static;order:-1}
+}
+
 /* Bang mau xe theo phien ban */
 .mau-nhom{font-size:1.02rem;margin:24px 0 12px}
 .mau-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
