@@ -77,9 +77,18 @@ a.card:hover{transform:translateY(-2px)}
 .stars{color:#f5a623;font-weight:700}
 
 /* The chi nhanh: noi dung ben trai, mock-up mat tien ben phai */
-.cn-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;align-items:center}
-.cn-anh img{width:100%;border-radius:12px;border:1px solid var(--line);background:#dff2fd}
-@media(max-width:600px){.cn-card{grid-template-columns:1fr}.cn-anh{order:-1}}
+.cn-card{padding:0;overflow:hidden}
+.cn-anh{display:block}
+.cn-anh img{width:100%;aspect-ratio:1200/709;object-fit:cover;background:#dff2fd;transition:transform .35s}
+.cn-card:hover .cn-anh img{transform:scale(1.03)}
+.cn-noi-dung{padding:18px 22px 20px}
+.cn-phuong{display:block;font-size:.72rem;letter-spacing:.7px;text-transform:uppercase;font-weight:700;color:var(--co-dam);margin-bottom:4px}
+.cn-noi-dung h3{font-size:1.15rem;margin-bottom:4px}
+.cn-diachi{font-size:.95rem;color:var(--ink);margin-bottom:8px}
+.cn-meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.88rem;color:var(--gray);margin-bottom:12px}
+.cn-meta a{font-weight:600;color:var(--ink)}
+.cn-link{font-weight:700;font-size:.9rem;color:var(--red)}
+.cn-link:hover{text-decoration:underline}
 
 /* Product grid */
 .product{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:box-shadow .2s,transform .2s}
