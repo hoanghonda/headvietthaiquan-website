@@ -76,6 +76,11 @@ a.card:hover{transform:translateY(-2px)}
 .nap li strong{min-width:86px;color:var(--gray);font-weight:600}
 .stars{color:#f5a623;font-weight:700}
 
+/* The chi nhanh: noi dung ben trai, mock-up mat tien ben phai */
+.cn-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:18px;align-items:center}
+.cn-anh img{width:100%;border-radius:12px;border:1px solid var(--line);background:#dff2fd}
+@media(max-width:600px){.cn-card{grid-template-columns:1fr}.cn-anh{order:-1}}
+
 /* Product grid */
 .product{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:box-shadow .2s,transform .2s}
 a.product:hover{box-shadow:0 6px 24px rgba(0,0,0,.10);transform:translateY(-2px)}
