@@ -1,8 +1,7 @@
 /* HEAD Việt Thái Quân — headvietthaiquan.vn */
 :root{
-  --red:#CC0000;--red-dark:#A30000;--ink:#1a1a1a;--gray:#555;--line:#e3ecdc;
-  --bg:#ffffff;--bg-soft:#f3faee;--radius:16px;
-  --troi:#dff2fd;--troi-dam:#bfe3f9;--co:#74bd45;--co-dam:#3f7d2a;--xanh-dam:#15386e;--hong:#e2397f;--hong-nhat:#fde6f0;
+  --red:#CC0000;--red-dark:#A30000;--ink:#1a1a1a;--gray:#555;--line:#e5e5e5;
+  --bg:#ffffff;--bg-soft:#f7f7f7;--radius:12px;
   --font:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -26,32 +25,21 @@ nav.main a{padding:8px 12px;border-radius:8px;font-weight:600;font-size:.92rem}
 nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;color:var(--ink);padding:56px 0 230px;
-  background:
-    url(/may.svg) right 6% top 18px/320px auto no-repeat,
-    url(/may.svg) left 4% top 52px/220px auto no-repeat,
-    linear-gradient(180deg,var(--troi) 0%,var(--troi-dam) 62%,#e6f4d8 100%)}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:220px;
-  background:url(/doi-co.svg) center bottom/cover no-repeat;pointer-events:none}
-.hero .container{position:relative;z-index:1}
-.hero h1{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;margin-bottom:14px;color:var(--xanh-dam)}
-.hero p{max-width:640px;font-size:1.05rem;color:#2c3e50}
-.hero a{color:var(--xanh-dam)}
+.hero{background:linear-gradient(135deg,var(--red) 0%,var(--red-dark) 70%);color:#fff;padding:56px 0}
+.hero h1{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;margin-bottom:14px}
+.hero p{max-width:640px;font-size:1.05rem;opacity:.95}
 .hero .cta-row{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent;font-family:inherit;cursor:pointer}
 .btn-white{background:#fff;color:var(--red)}
 .btn-white:hover{background:#f2f2f2}
-.btn-outline{border-color:var(--xanh-dam);color:var(--xanh-dam);background:rgba(255,255,255,.55)}
-.btn-outline:hover{background:#fff}
+.btn-outline{border-color:#fff;color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.15)}
 .btn-red{background:var(--red);color:#fff}
 .btn-red:hover{background:var(--red-dark)}
 
 /* Sections */
 section{padding:48px 0}
-section.alt{background:var(--bg-soft);position:relative}
-section.alt::before{content:"";position:absolute;left:0;right:0;top:-38px;height:40px;
-  background:url(/song-co.svg) center/100% 100% no-repeat;pointer-events:none}
-.hero + section.alt::before{display:none}
+section.alt{background:var(--bg-soft)}
 h2.sec{font-size:1.5rem;margin-bottom:8px}
 p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 .grid{display:grid;gap:20px}
@@ -63,12 +51,11 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 @media(max-width:980px){.grid-fixed{grid-template-columns:repeat(3,1fr)}}
 
 /* Cards */
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:box-shadow .2s,transform .2s}
-.card:hover{box-shadow:0 10px 28px rgba(63,125,42,.12)}
-a.card:hover{transform:translateY(-2px)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 6px 24px rgba(0,0,0,.08)}
 .card h3{margin-bottom:8px;font-size:1.1rem}
 .card p{color:var(--gray);font-size:.93rem}
-.badge{display:inline-block;background:var(--hong-nhat);color:var(--hong);font-weight:700;font-size:.75rem;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.badge{display:inline-block;background:#fdeaea;color:var(--red);font-weight:700;font-size:.75rem;padding:3px 10px;border-radius:999px;margin-bottom:10px}
 
 /* Branch card / NAP */
 .nap{list-style:none;margin:14px 0;font-size:.95rem}
@@ -79,10 +66,10 @@ a.card:hover{transform:translateY(-2px)}
 /* The chi nhanh: noi dung ben trai, mock-up mat tien ben phai */
 .cn-card{padding:0;overflow:hidden}
 .cn-anh{display:block}
-.cn-anh img{width:100%;aspect-ratio:1200/709;object-fit:cover;background:#dff2fd;transition:transform .35s}
+.cn-anh img{width:100%;aspect-ratio:1200/709;object-fit:cover;background:var(--bg-soft);transition:transform .35s}
 .cn-card:hover .cn-anh img{transform:scale(1.03)}
 .cn-noi-dung{padding:18px 22px 20px}
-.cn-phuong{display:block;font-size:.72rem;letter-spacing:.7px;text-transform:uppercase;font-weight:700;color:var(--co-dam);margin-bottom:4px}
+.cn-phuong{display:block;font-size:.72rem;letter-spacing:.7px;text-transform:uppercase;font-weight:700;color:var(--red);margin-bottom:4px}
 .cn-noi-dung h3{font-size:1.15rem;margin-bottom:4px}
 .cn-diachi{font-size:.95rem;color:var(--ink);margin-bottom:8px}
 .cn-meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.88rem;color:var(--gray);margin-bottom:12px}
@@ -178,8 +165,7 @@ table.hours th{background:var(--bg-soft)}
     mask-image:linear-gradient(90deg,#000 90%,transparent)}
   nav.main::-webkit-scrollbar{display:none}
   nav.main a{white-space:nowrap;flex:none}
-  .hero{padding:32px 0 150px}
-  .hero::after{height:140px}
+  .hero{padding:36px 0}
   section{padding:36px 0}
   /* Luoi xe 2 cot thay vi 1 cot cho do trong trai */
   .grid{gap:12px}
@@ -197,11 +183,11 @@ table.hours th{background:var(--bg-soft)}
 @media(max-width:760px){.callbar{display:flex}body{padding-bottom:52px}}
 
 /* Footer */
-footer.site{background:#1f3d2a;color:#cfe3c6;padding:40px 0 90px;font-size:.9rem}
+footer.site{background:var(--ink);color:#ccc;padding:40px 0 90px;font-size:.9rem}
 footer.site h4{color:#fff;margin-bottom:12px;font-size:1rem}
 footer.site a:hover{color:#fff;text-decoration:underline}
 footer.site .cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-footer.site .copy{margin-top:28px;padding-top:16px;border-top:1px solid #2f5a3d;font-size:.8rem;color:#9dbb92}
+footer.site .copy{margin-top:28px;padding-top:16px;border-top:1px solid #333;font-size:.8rem;color:#888}
 
 /* Utility */
 .mt-2{margin-top:16px}.mt-3{margin-top:24px}
