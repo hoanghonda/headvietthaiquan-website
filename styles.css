@@ -43,7 +43,7 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 .rv-quote p{font-size:1rem;line-height:1.6;font-style:italic;color:var(--ink)}
 .rv-author{margin-top:10px;font-size:.88rem;color:var(--gray)}
 .rv-meta{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:.82rem;color:var(--gray)}
-.rv-meta a{font-weight:700;color:var(--red)}
+.rv-meta a{display:block;margin-top:8px;font-weight:700;font-size:.9rem;color:var(--red);white-space:nowrap}
 .rv-meta a:hover{text-decoration:underline}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent;font-family:inherit;cursor:pointer}
 .btn-white{background:#fff;color:var(--red)}
