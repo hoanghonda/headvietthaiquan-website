@@ -223,7 +223,6 @@ footer.site{background:var(--ink);color:#ccc;padding:40px 0 90px;font-size:.9rem
 footer.site h4{color:#fff;margin-bottom:12px;font-size:1rem}
 footer.site a:hover{color:#fff;text-decoration:underline}
 footer.site .cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-footer.site .ft-logo{width:190px;height:auto;margin-bottom:14px;background:#fff;border-radius:8px;padding:8px 10px}
 footer.site .copy{margin-top:28px;padding-top:16px;border-top:1px solid #333;font-size:.8rem;color:#888}
 
 /* Utility */
