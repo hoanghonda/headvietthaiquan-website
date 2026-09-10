@@ -218,3 +218,19 @@ footer.site .copy{margin-top:28px;padding-top:16px;border-top:1px solid #333;fon
 /* Utility */
 .mt-2{margin-top:16px}.mt-3{margin-top:24px}
 .note{background:#fff8e6;border:1px solid #f0dfb0;border-radius:8px;padding:12px 16px;font-size:.88rem;color:#7a5c00}
+
+/* Tin tức: breadcrumb, thanh chuyên mục (chip), ngày trên thẻ bài viết */
+.hero .crumb{font-size:.9rem;opacity:.9;margin-bottom:8px}
+.hero .crumb a:hover{text-decoration:underline}
+.danh-muc{display:flex;gap:8px;flex-wrap:wrap}
+.danh-muc a{padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-weight:600;font-size:.9rem;background:#fff}
+.danh-muc a:hover{border-color:var(--red);color:var(--red)}
+.danh-muc a.active{background:var(--red);border-color:var(--red);color:#fff}
+.card .ngay{display:block;margin-top:12px;font-size:.8rem;color:var(--gray)}
+.bai-meta a{color:var(--red);font-weight:600}
+.bai-meta a:hover{text-decoration:underline}
+@media(max-width:860px){
+  .danh-muc{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .danh-muc::-webkit-scrollbar{display:none}
+  .danh-muc a{white-space:nowrap;flex:none}
+}

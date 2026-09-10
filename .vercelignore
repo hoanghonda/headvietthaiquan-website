@@ -1,0 +1,5 @@
+# Không deploy công cụ nội bộ, tài liệu và cấu hình Claude lên headvietthaiquan.vn
+tools/
+docs/
+.claude/
+README.md
