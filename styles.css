@@ -100,7 +100,7 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 .cn-meta a{font-weight:600;color:var(--ink)}
 
 /* Product grid */
-.product{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:box-shadow .2s,transform .2s}
+.product{display:block;position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:box-shadow .2s,transform .2s}
 a.product:hover{box-shadow:0 6px 24px rgba(0,0,0,.10);transform:translateY(-2px)}
 .product .ph{background:#fff;height:170px;display:flex;align-items:center;justify-content:center;color:#aaa;font-weight:700;font-size:.85rem;padding:10px;overflow:hidden}
 /* Khung ảnh xe chuẩn hoá theo LEAD 125: ảnh luôn canh giữa, cùng chiều cao khung.
@@ -111,6 +111,9 @@ a.product:hover{box-shadow:0 6px 24px rgba(0,0,0,.10);transform:translateY(-2px)
 .product .info h3{font-size:1rem;margin-bottom:4px}
 .product .info .price{color:var(--red);font-weight:800;font-size:.95rem}
 .product .info .cat{color:var(--gray);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+/* Nut "Xe moi nhat" goc the san pham, bam vao mo bai gioi thieu */
+.tag-moi{position:absolute;top:12px;left:12px;z-index:1;background:var(--red);color:#fff;font-weight:700;font-size:.74rem;letter-spacing:.3px;padding:5px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(204,0,0,.3)}
+.tag-moi:hover{background:var(--red-dark)}
 
 /* Bang anh khach hang chay ngang (trai -> phai, mo dan o hai mep) */
 .marquee{overflow:hidden;padding:4px 0;
