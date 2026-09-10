@@ -74,10 +74,35 @@ git commit -m "Tin tuc: <tiêu đề ngắn>"
 git push origin main            # Vercel tự deploy lên headvietthaiquan.vn
 ```
 
-Sau khi deploy: vào Google Search Console → *Kiểm tra URL* → *Yêu cầu lập chỉ mục* cho URL bài mới
-(sitemap đã tự cập nhật). Chia sẻ link lên Fanpage/Zalo để kiểm tra og:image hiển thị đúng.
+Sau khi merge vào `main`, Vercel deploy trong khoảng 1 phút. Tiếp theo làm mục 5b.
+
+## 5b. Google Search Console (bắt buộc sau mỗi bài)
+
+Việc này do Claude tự làm qua kết nối **Adspirer → Google Search Console** (tool `google_search_console`).
+Cần cấp quyền **một lần**: trong Adspirer mở *Settings → Connections → Google Search Console* và đăng nhập
+bằng tài khoản Google đang quản lý property `headvietthaiquan.vn`.
+
+Sau khi bài đã lên site, Claude thực hiện theo thứ tự:
+
+1. **Xác nhận URL đã online** (trả về 200): `https://headvietthaiquan.vn/tin-tuc/<slug>/`.
+2. **Gửi URL để lập chỉ mục** bằng action `google_search_console-submit-url-for-indexing` cho:
+   - URL bài mới;
+   - trang chuyên mục của bài (`/tin-tuc/<chuyen-muc>/`);
+   - trang chuyên mục / trang `/tin-tuc/` nếu là chuyên mục mới tạo.
+   Đây là thao tác ghi, chỉ gửi đúng URL vừa đăng, không gửi lại hàng loạt.
+3. **Kiểm tra sitemap**: `https://headvietthaiquan.vn/sitemap.xml` có chứa URL bài mới (đã sinh tự động).
+4. **Sau 3–7 ngày**: đọc hiệu suất bài bằng `google_search_console-retrieve-site-performance-data`
+   (dimension `page`, lọc URL bài) để biết bài đã có impression/click chưa; nếu chưa được lập chỉ mục, gửi lại URL một lần.
+
+Nếu kết nối chưa được cấp quyền, Claude phải nói rõ và đưa đường dẫn để cấp quyền, không được bỏ qua bước này.
+
+Ngoài ra: chia sẻ link lên Fanpage/Zalo để kiểm tra og:image hiển thị đúng.
 
 ## 6. Sửa bài đã đăng
+
+Sau khi sửa và deploy, gửi lại URL bài qua Search Console như mục 5b để Google cập nhật nội dung mới.
+
+### Các bước sửa
 
 1. Sửa HTML trong `tin-tuc/<slug>/index.html`.
 2. Cập nhật `dateModified` trong JSON-LD và `ngay_sua` trong `bai-viet.json` (cùng giá trị).
