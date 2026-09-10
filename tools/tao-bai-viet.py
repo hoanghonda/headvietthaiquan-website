@@ -71,7 +71,7 @@ def main():
     ap.add_argument("--sapo")
     ap.add_argument("--noi-dung", help="file HTML fragment")
     ap.add_argument("--ngay", default=datetime.date.today().isoformat())
-    ap.add_argument("--topbar", default="Đại lý Honda ủy nhiệm (HEAD) – phục vụ trên 20 năm")
+    ap.add_argument("--topbar", default="Phục vụ bà con từ 2004")
     ap.add_argument("--chu-thich")
     ap.add_argument("--cta-link")
     ap.add_argument("--cta-text")
