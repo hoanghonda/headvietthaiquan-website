@@ -37,10 +37,17 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 .hero .cta-row{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 /* Hero: 2 the danh gia Google theo chi nhanh, vong nguyet que hai ben */
 .hero .rv{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:30px}
-.rv-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:26px 22px 22px;text-align:center;box-shadow:0 12px 32px rgba(0,0,0,.2)}
-.rv-title{font-size:1.08rem;font-weight:800;line-height:1.3}
-.rv-title small{display:block;font-size:.82rem;font-weight:600;color:var(--gray);margin-top:2px}
-.rv-google{display:flex;justify-content:center;align-items:center;gap:8px;margin:12px 0 16px;font-size:.86rem;font-weight:700;color:#3c4043}
+/* The chi nhanh trong hero: anh cua hang + thong tin + danh gia Google */
+.rv-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:0;overflow:hidden;text-align:left;box-shadow:0 12px 32px rgba(0,0,0,.2);display:flex;flex-direction:column}
+.rv-anh{display:block}
+.rv-anh img{width:100%;aspect-ratio:1200/709;object-fit:cover;background:var(--bg-soft);transition:transform .35s}
+.rv-card:hover .rv-anh img{transform:scale(1.03)}
+.rv-body{padding:18px 22px 20px;display:flex;flex-direction:column;flex:1}
+.rv-title{font-size:1.15rem;font-weight:800;line-height:1.3;margin-bottom:4px}
+.rv-title a:hover{color:var(--red)}
+.rv-body .cn-meta{margin-bottom:0}
+.rv-review{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);text-align:center}
+.rv-google{display:flex;justify-content:center;align-items:center;gap:8px;margin:0 0 14px;font-size:.86rem;font-weight:700;color:#3c4043}
 .rv-google .g{width:20px;height:20px}
 .rv-stars{color:#f5a623;font-size:1.1rem;letter-spacing:2px;line-height:1}
 .rv-quote{display:grid;grid-template-columns:44px 1fr 44px;align-items:center;gap:6px;margin:0}
@@ -48,7 +55,8 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 .rv-quote img.phai{transform:scaleX(-1)}
 .rv-quote p{font-size:1rem;line-height:1.6;font-style:italic;color:var(--ink)}
 .rv-author{margin-top:10px;font-size:.88rem;color:var(--gray)}
-.rv-meta{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:.82rem;color:var(--gray)}
+.rv-meta{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:.82rem;color:var(--gray);text-align:center}
+.rv-review+.rv-meta{margin-top:14px}
 .rv-meta a{display:block;margin-top:8px;font-weight:700;font-size:.9rem;color:var(--red);white-space:nowrap}
 .rv-meta a:hover{text-decoration:underline}
 .btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid transparent;font-family:inherit;cursor:pointer}
@@ -86,18 +94,10 @@ p.sec-sub{color:var(--gray);margin-bottom:28px;max-width:680px}
 .stars{color:#f5a623;font-weight:700}
 
 /* The chi nhanh: noi dung ben trai, mock-up mat tien ben phai */
-.cn-card{padding:0;overflow:hidden}
-.cn-anh{display:block}
-.cn-anh img{width:100%;aspect-ratio:1200/709;object-fit:cover;background:var(--bg-soft);transition:transform .35s}
-.cn-card:hover .cn-anh img{transform:scale(1.03)}
-.cn-noi-dung{padding:18px 22px 20px}
 .cn-phuong{display:block;font-size:.72rem;letter-spacing:.7px;text-transform:uppercase;font-weight:700;color:var(--red);margin-bottom:4px}
-.cn-noi-dung h3{font-size:1.15rem;margin-bottom:4px}
 .cn-diachi{font-size:.95rem;color:var(--ink);margin-bottom:8px}
 .cn-meta{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.88rem;color:var(--gray);margin-bottom:12px}
 .cn-meta a{font-weight:600;color:var(--ink)}
-.cn-link{font-weight:700;font-size:.9rem;color:var(--red)}
-.cn-link:hover{text-decoration:underline}
 
 /* Product grid */
 .product{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:center;transition:box-shadow .2s,transform .2s}
@@ -198,7 +198,9 @@ table.hours th{background:var(--bg-soft)}
   nav.main a{white-space:nowrap;flex:none}
   .hero{padding:36px 0}
   .hero .rv{margin-top:22px;gap:14px}
-  .rv-card{padding:20px 14px 18px}
+  .rv-body{padding:16px 16px 18px}
+  .rv-google{font-size:.82rem;gap:6px}
+  .rv-google .rv-stars{font-size:1rem;letter-spacing:1px}
   .rv-quote{grid-template-columns:30px 1fr 30px}
   .rv-quote img{width:30px}
   .rv-quote p{font-size:.95rem}
