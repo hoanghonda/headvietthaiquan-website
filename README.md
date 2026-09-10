@@ -17,7 +17,7 @@ Da ket noi GitHub - Vercel: moi commit vao nhanh main se tu dong deploy len head
 ## Logo chinh thuc (bo file o thu muc goc)
 
 - `logo-vtq-mark.png` – bieu tuong VTQ (khong co dong chu) dung o header cung ten + dong mo ta, 2x cho man hinh retina.
-- `logo-vtq-600.png` – logo 600px dung o footer va truong `logo` trong JSON-LD (Organization / MotorcycleDealer / publisher).
+- `logo-vtq-600.png` – logo 600px dung cho truong `logo` trong JSON-LD (Organization / MotorcycleDealer / publisher).
 - `og-logo.jpg` – anh 1200x630 dung lam `og:image` mac dinh cho cac trang khong co anh rieng.
 - `favicon.ico`, `favicon-192.png`, `favicon-512.png`, `apple-touch-icon.png` – bieu tuong tab trinh duyet / them vao man hinh chinh.
 
