@@ -70,6 +70,11 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 .btn-outline:hover{background:rgba(255,255,255,.15)}
 .btn-red{background:var(--red);color:#fff}
 .btn-red:hover{background:var(--red-dark)}
+/* Nut Facebook chi nhanh */
+.btn-fb{display:inline-flex;align-items:center;gap:6px}
+.btn-fb .fb,.cn-fb .fb{width:16px;height:16px;fill:currentColor}
+.cn-fb{display:inline-flex;align-items:center;gap:4px;color:#1877f2;font-weight:600}
+.cn-fb:hover{text-decoration:underline}
 
 /* Sections */
 section{padding:48px 0}

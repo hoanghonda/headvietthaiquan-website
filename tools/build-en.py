@@ -92,6 +92,10 @@ COMMON = [
     ('<a class="btn btn-outline" href="https://zalo.me/1375768392800157726">💬 Chat Zalo</a>', '<a class="btn btn-outline" href="https://zalo.me/1375768392800157726">💬 Chat on Zalo</a>'),
     ('<a class="btn btn-outline" href="https://zalo.me/596730140125275087">💬 Chat Zalo</a>', '<a class="btn btn-outline" href="https://zalo.me/596730140125275087">💬 Chat on Zalo</a>'),
     ('>Chỉ đường Google Maps</a>', '>Directions on Google Maps</a>'),
+    ('Facebook chi nhánh 1</a>', 'Branch 1 on Facebook</a>'),
+    ('Facebook chi nhánh 2</a>', 'Branch 2 on Facebook</a>'),
+    ('>HEAD Việt Thái Quân 1 trên Facebook</a>', '>HEAD Viet Thai Quan 1 on Facebook</a>'),
+    ('>HEAD Việt Thái Quân 2 trên Facebook</a>', '>HEAD Viet Thai Quan 2 on Facebook</a>'),
     ('<div class="card"><h3>Bảo dưỡng &amp; sửa chữa</h3><p>Thay nhớt, bảo dưỡng định kỳ, sửa chữa với phụ tùng chính hãng ngay tại chỗ. Hỗ trợ cứu hộ tận nơi.</p></div>',
      '<div class="card"><h3>Servicing &amp; repairs</h3><p>Oil changes, scheduled maintenance and repairs with genuine parts, done on site. Roadside assistance available.</p></div>'),
     ('<div class="card"><h3>Bảo dưỡng &amp; sửa chữa</h3><p>Thay nhớt, bảo dưỡng định kỳ với phụ tùng chính hãng. Hỗ trợ cứu hộ tận nơi khi xe gặp sự cố.</p></div>',
@@ -237,7 +241,7 @@ def build(vi_file):
                       f'<link rel="alternate" hreflang="vi" href="{DOMAIN}{vi_path}">\n'
                       f'<link rel="alternate" hreflang="x-default" href="{DOMAIN}{vi_path}">')
     # Nút ngôn ngữ: English -> Tiếng Việt (quay về trang gốc)
-    out, n = re.subn(r'<a class="lang" href="[^"]*" lang="en" hreflang="en" title="Read this website in English" rel="nofollow">',
+    out, n = re.subn(r'<a class="lang" href="[^"]*" lang="en" hreflang="en" title="Read this website in English"(?: rel="nofollow")?>',
                      f'<a class="lang" href="{vi_path}" lang="vi" hreflang="vi" title="Xem trang này bằng tiếng Việt">', out)
     if n != 1: errors.append("không tìm thấy nút ngôn ngữ")
     out = out.replace(GLOBE + 'English</a>', GLOBE + 'Tiếng Việt</a>')
