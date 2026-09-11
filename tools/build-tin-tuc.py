@@ -40,6 +40,9 @@ STATIC_PAGES = [
     ("/xe-may/vario125/", "2026-09-01", "0.8"),
     ("/dich-vu/", "2026-09-01", "0.8"),
     ("/khuyen-mai/", "2026-09-01", "0.9"),
+    ("/en/", "2026-09-11", "0.8"),
+    ("/en/head-viet-thai-quan-1/", "2026-09-11", "0.7"),
+    ("/en/head-viet-thai-quan-2/", "2026-09-11", "0.7"),
 ]
 
 START = "<!-- BAI-VIET:START -->"
