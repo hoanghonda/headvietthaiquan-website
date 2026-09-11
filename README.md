@@ -22,3 +22,9 @@ Da ket noi GitHub - Vercel: moi commit vao nhanh main se tu dong deploy len head
 - `favicon.ico`, `favicon-192.png`, `favicon-512.png`, `apple-touch-icon.png` – bieu tuong tab trinh duyet / them vao man hinh chinh.
 
 File goc: "VTQ Logo 190523-01" (PNG 4167x4167) tren Google Drive cong ty. Khi doi logo, thay ca bo file tren, giu nguyen ten.
+
+## Nut "English" (thanh tren cung)
+
+Moi trang co nut English mo chinh trang do qua Google Translate (headvietthaiquan-vn.translate.goog, dich vi -> en).
+Khong can dich tay: bai viet moi tao bang tools/tao-bai-viet.py tu dong co nut nay (template da chua link theo slug).
+
