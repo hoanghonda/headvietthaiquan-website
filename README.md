@@ -23,8 +23,12 @@ Da ket noi GitHub - Vercel: moi commit vao nhanh main se tu dong deploy len head
 
 File goc: "VTQ Logo 190523-01" (PNG 4167x4167) tren Google Drive cong ty. Khi doi logo, thay ca bo file tren, giu nguyen ten.
 
-## Nut "English" (thanh tren cung)
+## Tieng Anh
 
-Moi trang co nut English mo chinh trang do qua Google Translate (headvietthaiquan-vn.translate.goog, dich vi -> en).
-Khong can dich tay: bai viet moi tao bang tools/tao-bai-viet.py tu dong co nut nay (template da chua link theo slug).
+- Trang chu va 2 trang chi nhanh co ban tieng Anh rieng: `/en/`, `/en/head-viet-thai-quan-1/`, `/en/head-viet-thai-quan-2/`.
+  Sinh tu trang tieng Viet bang `python3 tools/build-en.py` (bang dich nam trong script; chay lai sau khi sua 3 trang nay,
+  script se bao loi neu con sot tieng Viet hoac chuoi goc da doi).
+- Cac trang con lai: nut English o thanh tren cung mo trang do qua Google Translate (headvietthaiquan-vn.translate.goog).
+  Bai viet moi tao bang tools/tao-bai-viet.py tu dong co nut nay.
+- Trang EN va VI lien ket nhau bang hreflang; sitemap co 3 URL /en/.
 
