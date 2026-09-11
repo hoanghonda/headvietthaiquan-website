@@ -70,11 +70,16 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 .btn-outline:hover{background:rgba(255,255,255,.15)}
 .btn-red{background:var(--red);color:#fff}
 .btn-red:hover{background:var(--red-dark)}
-/* Nut Facebook chi nhanh */
-.btn-fb{display:inline-flex;align-items:center;gap:6px}
-.btn-fb .fb,.cn-fb .fb{width:16px;height:16px;fill:currentColor}
-.cn-fb{display:inline-flex;align-items:center;gap:4px;color:#1877f2;font-weight:600}
-.cn-fb:hover{text-decoration:underline}
+/* Hang icon mang xa hoi (Facebook, TikTok, YouTube) */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.social-row{display:flex;align-items:center;gap:30px;margin-top:26px}
+.so{display:inline-flex;color:#fff;transition:opacity .2s,transform .2s}
+.so svg{width:32px;height:32px;fill:currentColor}
+.so:hover{opacity:.8;transform:translateY(-2px)}
+.cn-social{display:flex;gap:16px;margin-top:10px}
+.cn-social .so{color:var(--ink)}
+.cn-social .so svg{width:22px;height:22px}
+.cn-social .so:hover{color:var(--red)}
 
 /* Sections */
 section{padding:48px 0}
