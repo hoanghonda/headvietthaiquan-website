@@ -32,3 +32,9 @@ File goc: "VTQ Logo 190523-01" (PNG 4167x4167) tren Google Drive cong ty. Khi do
   Bai viet moi tao bang tools/tao-bai-viet.py tu dong co nut nay.
 - Trang EN va VI lien ket nhau bang hreflang; sitemap co 3 URL /en/.
 
+## Anh xe cho the san pham
+
+- Chuan chung: khung 4:3 (1000x750), nen trang, xe chiem 89% chieu ngang (toi da 83% chieu cao) - cung khung voi anh CDN Honda.
+- Them xe moi: `python3 tools/chuan-hoa-anh-xe.py anh-goc.png ten-xe-card.jpg` roi dung file dich trong the san pham, khong can `--zoom`.
+- `--zoom` chi dung cho anh lay truc tiep tu cdn.honda.com.vn khi khung anh cua Honda lech (LEAD 0.93, SH Mode 0.98, Wave RSX 0.81).
+
