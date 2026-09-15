@@ -14,7 +14,7 @@
 - Trang tổng: `/tin-tuc/` (tất cả bài, thanh chuyên mục ở trên).
 - Bài viết: `/tin-tuc/<slug>/` (phẳng, không lồng theo chuyên mục – đổi chuyên mục không làm đổi URL).
 - Khuyến mãi vẫn ở trang riêng `/khuyen-mai/`, được link từ thanh chuyên mục.
-- Nguồn dữ liệu duy nhất: `tin-tuc/bai-viet.json`. Danh sách bài trên các trang và `sitemap.xml` được sinh tự động từ file này.
+- Nguồn dữ liệu duy nhất: `tin-tuc/bai-viet.json`. Danh sách bài trên các trang, khối **Tin tức mới** ở trang chủ (3 bài mới nhất) và `sitemap.xml` được sinh tự động từ file này. Link từ trang chủ giúp Google phát hiện bài mới nhanh hơn (tránh trạng thái "Discovered – currently not indexed" với "Referring page: None detected").
 
 ## 2. Chuẩn bị trước khi viết (5 phút)
 
