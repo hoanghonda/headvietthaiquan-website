@@ -49,6 +49,9 @@ START = "<!-- BAI-VIET:START -->"
 END = "<!-- BAI-VIET:END -->"
 CHIP_START = "<!-- DANH-MUC:START -->"
 CHIP_END = "<!-- DANH-MUC:END -->"
+HOME_START = "<!-- BAI-VIET-TRANG-CHU:START -->"
+HOME_END = "<!-- BAI-VIET-TRANG-CHU:END -->"
+HOME_LIMIT = 3  # số bài mới nhất hiện ở trang chủ
 
 
 def vn_date(iso):
@@ -128,6 +131,15 @@ def write_listing(path, posts, active):
     print(f"  ✔ {path.relative_to(ROOT)} ({len(posts)} bài)")
 
 
+def write_home(posts):
+    """Trang chủ: 3 bài mới nhất, để Google tìm thấy bài mới ngay từ trang được crawl thường xuyên nhất."""
+    path = ROOT / "index.html"
+    text = path.read_text(encoding="utf-8")
+    text = replace_between(text, HOME_START, HOME_END, cards_block(posts[:HOME_LIMIT]), path)
+    path.write_text(text, encoding="utf-8")
+    print(f"  ✔ index.html ({min(len(posts), HOME_LIMIT)} bài mới nhất)")
+
+
 def write_sitemap(posts):
     latest = max(p["ngay_sua"] for p in posts) if posts else "2026-09-01"
     lines = ['<?xml version="1.0" encoding="UTF-8"?>',
@@ -156,6 +168,7 @@ def main():
             print(f"LỖI: thiếu trang chuyên mục {page.relative_to(ROOT)}")
             sys.exit(1)
         write_listing(page, [p for p in posts if p["danh_muc"] == slug], slug)
+    write_home(posts)
     write_sitemap(posts)
 
 

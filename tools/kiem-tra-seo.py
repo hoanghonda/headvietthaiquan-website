@@ -137,6 +137,10 @@ def main():
                 err(d.name, "có thư mục nhưng chưa đăng ký trong bai-viet.json")
     for p in posts:
         check_article(p, listings)
+    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    for p in build.load_registry()[:build.HOME_LIMIT]:
+        if f'href="/tin-tuc/{p["slug"]}/"' not in home:
+            err(p["slug"], "chưa có link từ trang chủ (chạy tools/build-tin-tuc.py)")
 
     print(f"Đã kiểm tra {len(posts)} bài.")
     for w in warns: print("  ⚠ " + w)
