@@ -7,7 +7,8 @@
     "ngay_dang": "2026-09-01",
     "ngay_sua": "2026-09-01",
     "anh": "/vario-125-2027.jpg",
-    "alt": "Honda Vario 125 2027 ra mắt tại HEAD Việt Thái Quân"
+    "alt": "Honda Vario 125 2027 ra mắt tại HEAD Việt Thái Quân",
+    "icon": "scooter"
   },
   {
     "slug": "tuyen-truyen-lai-xe-an-toan-cat-lai",
@@ -17,7 +18,8 @@
     "ngay_dang": "2026-09-01",
     "ngay_sua": "2026-09-01",
     "anh": "/atgt-cat-lai-1.jpg",
-    "alt": "HEAD Việt Thái Quân trao tặng mũ bảo hiểm cùng Đội CSGT Cát Lái"
+    "alt": "HEAD Việt Thái Quân trao tặng mũ bảo hiểm cùng Đội CSGT Cát Lái",
+    "icon": "helmet"
   },
   {
     "slug": "super-cub-125-2026-euro-4",
@@ -27,7 +29,8 @@
     "ngay_dang": "2026-09-10",
     "ngay_sua": "2026-09-10",
     "anh": "/super-cub-125-2026.jpg",
-    "alt": "Honda Super Cub C125 2026 chuẩn Euro 4 màu Bạc trắng, yên da nâu"
+    "alt": "Honda Super Cub C125 2026 chuẩn Euro 4 màu Bạc trắng, yên da nâu",
+    "icon": "super-cub"
   },
   {
     "slug": "ung-dung-my-honda-plus-tinh-nang",
@@ -37,6 +40,7 @@
     "ngay_dang": "2026-09-16",
     "ngay_sua": "2026-09-16",
     "anh": "/my-honda-plus.jpg",
-    "alt": "Banner My Honda+ Tích điểm thả ga – Quyền lợi bao la của Honda Việt Nam"
+    "alt": "Banner My Honda+ Tích điểm thả ga – Quyền lợi bao la của Honda Việt Nam",
+    "icon": "phone-app"
   }
 ]

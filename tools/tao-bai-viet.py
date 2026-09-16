@@ -19,6 +19,7 @@ Cách dùng (tất cả tham số dạng --ten=gia-tri hoặc --ten "giá trị"
     [--topbar "Câu chạy ở thanh trên cùng"]
     [--chu-thich "Chú thích dưới ảnh"]
     [--cta-link /dich-vu/ --cta-text "Xem dịch vụ tại cửa hàng"]
+    [--icon super-cub]            (icon nét mảnh trên thẻ tin; xem thư mục icons/; mặc định theo chuyên mục)
     [--tieu-de-ngan "Thay nhớt xe máy"]  (đoạn cuối breadcrumb, mặc định = tiêu đề)
 
 Sau khi chạy: mở tin-tuc/<slug>/index.html để hoàn thiện nội dung,
@@ -75,6 +76,8 @@ def main():
     ap.add_argument("--chu-thich")
     ap.add_argument("--cta-link")
     ap.add_argument("--cta-text")
+    ap.add_argument("--icon", choices=sorted(f.stem for f in build.ICON_DIR.glob("*.svg")),
+                    help="icon minh họa trên thẻ tin (mặc định theo chuyên mục: " + ", ".join(f"{k}={v}" for k, v in build.ICON_MAC_DINH.items()) + ")")
     a = ap.parse_args()
 
     dest = ROOT / "tin-tuc" / a.slug / "index.html"
@@ -129,6 +132,7 @@ def main():
     posts.append({
         "slug": a.slug, "tieu_de": a.tieu_de, "danh_muc": a.danh_muc, "mo_ta": a.mo_ta,
         "ngay_dang": a.ngay, "ngay_sua": a.ngay, "anh": a.anh, "alt": a.alt,
+        "icon": a.icon or "",
     })
     REGISTRY.write_text(json.dumps(posts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"  ✔ đăng ký vào {REGISTRY.relative_to(ROOT)}")

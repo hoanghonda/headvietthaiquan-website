@@ -31,6 +31,10 @@ CATEGORIES = {
     },
 }
 
+# Icon minh họa trên thẻ tin (file SVG trong /icons/). Bài có trường "icon" thì dùng, không thì lấy theo chuyên mục.
+ICON_DIR = ROOT / "icons"
+ICON_MAC_DINH = {"tin-tuc-su-kien": "star", "kien-thuc": "bulb", "cong-dong": "helmet"}
+
 # Các trang cố định trong sitemap (ngoài bài viết & chuyên mục, được sinh tự động).
 STATIC_PAGES = [
     ("/", "2026-09-01", "1.0"),
@@ -78,6 +82,9 @@ def load_registry():
             errors.append(f"{p['slug']}: ngay_dang phải dạng YYYY-MM-DD")
         if not (ROOT / "tin-tuc" / p["slug"] / "index.html").exists():
             errors.append(f"{p['slug']}: chưa có file tin-tuc/{p['slug']}/index.html")
+        icon = p.get("icon") or ICON_MAC_DINH.get(p["danh_muc"], "")
+        if icon and not (ICON_DIR / f"{icon}.svg").exists():
+            errors.append(f"{p['slug']}: icon '{icon}' không có trong icons/ (có: {', '.join(sorted(f.stem for f in ICON_DIR.glob('*.svg')))})")
         p.setdefault("ngay_sua", p["ngay_dang"])
     if errors:
         print("LỖI trong bai-viet.json:\n  - " + "\n  - ".join(errors))
@@ -88,8 +95,11 @@ def load_registry():
 
 def card(p):
     cat = CATEGORIES[p["danh_muc"]]["ten"]
+    icon = p.get("icon") or ICON_MAC_DINH.get(p["danh_muc"], "")
+    icon_html = f'<img class="tin-icon" src="/icons/{icon}.svg" alt="" width="64" height="64" loading="lazy">' if icon else ""
     return (
         f'      <a class="card" href="/tin-tuc/{p["slug"]}/">'
+        f'{icon_html}'
         f'<span class="badge">{html.escape(cat)}</span>'
         f'<h3>{html.escape(p["tieu_de"])}</h3>'
         f'<p>{html.escape(p["mo_ta"])}</p>'

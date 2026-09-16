@@ -22,6 +22,7 @@
 2. **Slug**: không dấu, chữ thường, gạch ngang, 3–6 từ, chứa từ khóa. Ví dụ `bao-lau-nen-thay-nhot-xe-may`.
 3. **Ảnh đại diện**: 1 ảnh JPG tỷ lệ 3:4 (1080×1440), ≤ 300 KB, đặt ở thư mục gốc, tên không dấu (ví dụ `thay-nhot-xe-may.jpg`). Ảnh này dùng cho cả `og:image` (Facebook/Zalo) và JSON-LD.
 4. **Chọn chuyên mục** theo bảng trên.
+5. **Chọn icon minh họa** cho thẻ tin (nét mảnh, màu vàng đồng trên ô trắng, thư mục `icons/`): `super-cub`, `scooter`, `phone-app`, `helmet`, `star`, `bulb`. Không chọn thì lấy mặc định theo chuyên mục: Tin tức & Sự kiện → `star`, Kiến thức → `bulb`, Cộng đồng → `helmet`. Chủ đề mới (xe mới, dịch vụ mới) thì vẽ thêm 1 file SVG 64×64 cùng phong cách (stroke `#c49a5b`, width 1.6, không fill) vào `icons/` rồi dùng tên file.
 
 ## 3. Tạo bài
 
@@ -40,7 +41,7 @@ Script sẽ: tạo `tin-tuc/<slug>/index.html` từ `tools/mau-bai-viet.html` (�
 JSON-LD `NewsArticle` + `BreadcrumbList`, breadcrumb 4 cấp, link chuyên mục), thêm bài vào `bai-viet.json`,
 rồi sinh lại `/tin-tuc/`, trang chuyên mục và `sitemap.xml`.
 
-Tham số tùy chọn: `--tieu-de-seo` (thẻ title riêng), `--sapo` (câu dẫn dưới H1), `--ngay YYYY-MM-DD`,
+Tham số tùy chọn: `--icon` (icon thẻ tin), `--tieu-de-seo` (thẻ title riêng), `--sapo` (câu dẫn dưới H1), `--ngay YYYY-MM-DD`,
 `--topbar`, `--chu-thich`, `--cta-link`, `--cta-text`, `--tieu-de-ngan` (đoạn cuối breadcrumb).
 
 ## 4. Chuẩn nội dung
