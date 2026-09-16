@@ -33,7 +33,7 @@ CATEGORIES = {
 
 # Icon minh họa trên thẻ tin (file SVG trong /icons/). Bài có trường "icon" thì dùng, không thì lấy theo chuyên mục.
 ICON_DIR = ROOT / "icons"
-ICON_MAC_DINH = {"tin-tuc-su-kien": "star", "kien-thuc": "bulb", "cong-dong": "helmet"}
+ICON_MAC_DINH = {}  # tạm tắt icon mặc định cho tới khi có bộ icon mới (thiết kế lại trên Figma)
 
 # Các trang cố định trong sitemap (ngoài bài viết & chuyên mục, được sinh tự động).
 STATIC_PAGES = [
