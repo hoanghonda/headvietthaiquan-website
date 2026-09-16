@@ -16,6 +16,7 @@ Từ nội dung người dùng đưa, xác định:
 - **Slug** – không dấu, chữ thường, gạch ngang, chứa từ khóa, không trùng thư mục có sẵn trong `tin-tuc/`.
 - **Ảnh** – nếu người dùng chưa cung cấp, hỏi tên file ảnh; nếu không có, chọn ảnh có sẵn phù hợp ở thư mục gốc và nói rõ. Ảnh phải tồn tại trước khi commit.
 - **Ngày đăng** – mặc định hôm nay.
+- **Icon thẻ tin** – chọn từ `icons/` (`super-cub`, `scooter`, `phone-app`, `helmet`, `star`, `bulb`) sao cho khách nhìn icon đoán được chủ đề; truyền `--icon`. Chủ đề chưa có icon: vẽ thêm 1 SVG 64×64 cùng phong cách (stroke `#c49a5b`, width 1.6, không fill, có vài dấu lấp lánh) vào `icons/`, xem thử bằng Chromium trước khi dùng.
 
 Chỉ hỏi lại khi thiếu thông tin không thể suy ra (ảnh, số liệu giá, ngày sự kiện).
 
