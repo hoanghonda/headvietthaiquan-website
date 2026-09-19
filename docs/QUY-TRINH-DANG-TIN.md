@@ -20,7 +20,7 @@
 
 1. **Từ khóa chính**: 1 cụm người dùng sẽ gõ Google (ví dụ: `thay nhớt xe máy bao lâu`, `vario 125 2027 giá`). Từ khóa phải nằm trong tiêu đề, H1, mô tả, đoạn mở đầu và ít nhất 1 H2.
 2. **Slug**: không dấu, chữ thường, gạch ngang, 3–6 từ, chứa từ khóa. Ví dụ `bao-lau-nen-thay-nhot-xe-may`.
-3. **Ảnh đại diện**: 1 ảnh JPG tỷ lệ 3:4 (1080×1440), ≤ 300 KB, đặt ở thư mục gốc, tên không dấu (ví dụ `thay-nhot-xe-may.jpg`). Ảnh này dùng cho cả `og:image` (Facebook/Zalo) và JSON-LD.
+3. **Ảnh đại diện**: 1 ảnh JPG tỷ lệ 3:4 (1080×1440), ≤ 300 KB, đặt ở thư mục gốc, tên không dấu (ví dụ `thay-nhot-xe-may.jpg`). Ảnh này dùng cho cả `og:image` (Facebook/Zalo) và JSON-LD. **Ảnh thẻ tin** (640×400 trong `thumbs/`) được build tự cắt từ ảnh này; muốn dùng ảnh khác cho thẻ thì thêm `anh_the` trong `bai-viet.json`, ảnh nền trắng (sản phẩm, điện thoại) thêm `anh_the_kieu: "contain"` để không bị cắt.
 4. **Chọn chuyên mục** theo bảng trên.
 5. **Chọn icon minh họa** cho thẻ tin (nét mảnh, màu vàng đồng trên ô trắng, thư mục `icons/`): `super-cub`, `scooter`, `phone-app`, `helmet`, `star`, `bulb`. Không chọn thì lấy mặc định theo chuyên mục: Tin tức & Sự kiện → `star`, Kiến thức → `bulb`, Cộng đồng → `helmet`. Chủ đề mới (xe mới, dịch vụ mới) thì vẽ thêm 1 file SVG 64×64 cùng phong cách (stroke `#c49a5b`, width 1.6, không fill) vào `icons/` rồi dùng tên file.
 
