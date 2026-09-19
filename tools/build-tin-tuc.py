@@ -9,6 +9,7 @@ các marker <!-- BAI-VIET:START --> ... <!-- BAI-VIET:END --> trong HTML.
 """
 import json, re, sys, html
 from pathlib import Path
+from PIL import Image  # pip install pillow
 
 ROOT = Path(__file__).resolve().parent.parent
 DOMAIN = "https://headvietthaiquan.vn"
@@ -48,6 +49,33 @@ STATIC_PAGES = [
     ("/en/head-viet-thai-quan-1/", "2026-09-11", "0.7"),
     ("/en/head-viet-thai-quan-2/", "2026-09-11", "0.7"),
 ]
+
+THUMB_DIR = ROOT / "thumbs"   # ảnh thẻ tin 640x400, sinh tự động từ ảnh của bài
+THUMB_W, THUMB_H = 640, 400
+
+
+def make_thumb(p):
+    """Tạo /thumbs/<slug>.jpg từ ảnh thẻ (anh_the) hoặc ảnh chính (anh). Kiểu: cover (cắt giữa) hoặc contain (nền trắng)."""
+    src = ROOT / (p.get("anh_the") or p["anh"]).lstrip("/")
+    out = THUMB_DIR / f"{p['slug']}.jpg"
+    if not src.exists():
+        print(f"  ⚠ {p['slug']}: thiếu ảnh {src.name}, bỏ qua thumbnail"); return None
+    if out.exists() and out.stat().st_mtime >= src.stat().st_mtime:
+        return f"/thumbs/{p['slug']}.jpg"
+    THUMB_DIR.mkdir(exist_ok=True)
+    im = Image.open(src).convert("RGB")
+    if p.get("anh_the_kieu") == "contain":
+        im.thumbnail((THUMB_W - 40, THUMB_H - 24))
+        canvas = Image.new("RGB", (THUMB_W, THUMB_H), (255, 255, 255))
+        canvas.paste(im, ((THUMB_W - im.width) // 2, (THUMB_H - im.height) // 2)); im = canvas
+    else:
+        r = THUMB_W / THUMB_H; w, h = im.size
+        if w / h > r: nw = int(h * r); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+        else: nh = int(w / r); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+        im = im.resize((THUMB_W, THUMB_H), Image.LANCZOS)
+    im.save(out, "JPEG", quality=82, optimize=True, progressive=True)
+    return f"/thumbs/{p['slug']}.jpg"
+
 
 START = "<!-- BAI-VIET:START -->"
 END = "<!-- BAI-VIET:END -->"
@@ -97,9 +125,11 @@ def card(p):
     cat = CATEGORIES[p["danh_muc"]]["ten"]
     icon = p.get("icon") or ICON_MAC_DINH.get(p["danh_muc"], "")
     icon_html = f'<img class="tin-icon" src="/icons/{icon}.svg" alt="" width="64" height="64" loading="lazy">' if icon else ""
+    thumb = make_thumb(p)
+    thumb_html = f'<img class="the-anh" src="{thumb}" alt="{html.escape(p["alt"])}" width="{THUMB_W}" height="{THUMB_H}" loading="lazy">' if thumb else ""
     return (
         f'      <a class="card" href="/tin-tuc/{p["slug"]}/">'
-        f'{icon_html}'
+        f'{thumb_html}{icon_html}'
         f'<span class="badge">{html.escape(cat)}</span>'
         f'<h3>{html.escape(p["tieu_de"])}</h3>'
         f'<p>{html.escape(p["mo_ta"])}</p>'
