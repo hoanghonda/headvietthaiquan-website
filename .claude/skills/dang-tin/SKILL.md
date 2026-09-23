@@ -58,17 +58,10 @@ Commit tất cả file thay đổi (bài mới, `bai-viet.json`, các trang danh
 
 Ảnh: nếu người dùng dán ảnh vào chat, ảnh KHÔNG thành file trên máy chủ. Hướng dẫn họ tải lên GitHub (Add file → Upload files, tên file không dấu) hoặc Google Drive, rồi lấy về. File .jpg tải lên có thể là PNG thật: kiểm tra bằng `file`, chuyển sang JPEG bằng Pillow (`pip install pillow`), nén ≤ 300 KB, ảnh chính khung 3:4 1080×1440.
 
-## Bước 6 – Google Search Console (không được bỏ qua)
+## Bước 6 – Báo cáo
 
-Sau khi merge và site đã cập nhật, tự thao tác qua tool `mcp__adspirer__google_search_console`:
-
-1. Gọi `action: "list_tools"` để lấy tên action chính xác. Nếu tool trả lời chưa kết nối, nói rõ với người dùng: cần vào Adspirer → Settings → Connections → Google Search Console để cấp quyền một lần, rồi dừng bước này và ghi vào báo cáo là còn chờ.
-2. Xác nhận URL bài trả về 200 (nếu mạng phiên chặn headvietthaiquan.vn, dựa vào trạng thái deploy của Vercel trên commit merge).
-3. Gọi `google_search_console-submit-url-for-indexing` với `https://headvietthaiquan.vn/tin-tuc/<slug>/`, sau đó với trang chuyên mục `https://headvietthaiquan.vn/tin-tuc/<danh-muc>/`. Chỉ gửi đúng các URL vừa thay đổi.
-4. Ghi kết quả vào báo cáo cuối: URL đã gửi, thời điểm, và hẹn kiểm tra hiệu suất sau 3–7 ngày bằng `google_search_console-retrieve-site-performance-data` (dimension `page`).
-
-Báo cáo cuối luôn có: URL bài, chuyên mục, trạng thái deploy, trạng thái Search Console.
+Báo cáo cuối luôn có: URL bài, chuyên mục, trạng thái deploy, và **một dòng** nhắc người dùng tự yêu cầu lập chỉ mục URL trong Google Search Console. Không dùng tool Adspirer, không kiểm tra hay nhắc kết nối Search Console qua Adspirer.
 
 ## Sửa bài đã đăng
 
-Sửa HTML, cập nhật `dateModified` trong JSON-LD và `ngay_sua` trong `bai-viet.json`, chạy `python3 tools/build-tin-tuc.py` rồi `python3 tools/kiem-tra-seo.py`. Không đổi slug. Sau khi deploy, gửi lại URL bài qua Search Console (Bước 6).
+Sửa HTML, cập nhật `dateModified` trong JSON-LD và `ngay_sua` trong `bai-viet.json`, chạy `python3 tools/build-tin-tuc.py` rồi `python3 tools/kiem-tra-seo.py`. Không đổi slug. Sau khi deploy, nhắc người dùng yêu cầu lập chỉ mục lại URL trong Search Console.
