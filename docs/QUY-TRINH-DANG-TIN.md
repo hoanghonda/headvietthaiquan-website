@@ -77,31 +77,16 @@ git push origin main            # Vercel tự deploy lên headvietthaiquan.vn
 
 Sau khi merge vào `main`, Vercel deploy trong khoảng 1 phút. Tiếp theo làm mục 5b.
 
-## 5b. Google Search Console (bắt buộc sau mỗi bài)
+## 5b. Sau khi đăng (chủ cửa hàng tự làm, không qua Adspirer)
 
-Việc này do Claude tự làm qua kết nối **Adspirer → Google Search Console** (tool `google_search_console`).
-Cần cấp quyền **một lần**: trong Adspirer mở *Settings → Connections → Google Search Console* và đăng nhập
-bằng tài khoản Google đang quản lý property `headvietthaiquan.vn`.
+- Vào Google Search Console, dán URL bài mới vào ô *Kiểm tra URL* và bấm *Yêu cầu lập chỉ mục*. Sitemap đã tự cập nhật.
+- Chia sẻ link lên Fanpage/Zalo để kiểm tra og:image hiển thị đúng.
 
-Sau khi bài đã lên site, Claude thực hiện theo thứ tự:
-
-1. **Xác nhận URL đã online** (trả về 200): `https://headvietthaiquan.vn/tin-tuc/<slug>/`.
-2. **Gửi URL để lập chỉ mục** bằng action `google_search_console-submit-url-for-indexing` cho:
-   - URL bài mới;
-   - trang chuyên mục của bài (`/tin-tuc/<chuyen-muc>/`);
-   - trang chuyên mục / trang `/tin-tuc/` nếu là chuyên mục mới tạo.
-   Đây là thao tác ghi, chỉ gửi đúng URL vừa đăng, không gửi lại hàng loạt.
-3. **Kiểm tra sitemap**: `https://headvietthaiquan.vn/sitemap.xml` có chứa URL bài mới (đã sinh tự động).
-4. **Sau 3–7 ngày**: đọc hiệu suất bài bằng `google_search_console-retrieve-site-performance-data`
-   (dimension `page`, lọc URL bài) để biết bài đã có impression/click chưa; nếu chưa được lập chỉ mục, gửi lại URL một lần.
-
-Nếu kết nối chưa được cấp quyền, Claude phải nói rõ và đưa đường dẫn để cấp quyền, không được bỏ qua bước này.
-
-Ngoài ra: chia sẻ link lên Fanpage/Zalo để kiểm tra og:image hiển thị đúng.
+Claude **không** thao tác Search Console và **không** dùng kết nối Adspirer trong quy trình này; chỉ nhắc một dòng trong báo cáo cuối.
 
 ## 6. Sửa bài đã đăng
 
-Sau khi sửa và deploy, gửi lại URL bài qua Search Console như mục 5b để Google cập nhật nội dung mới.
+Sau khi sửa và deploy, chủ cửa hàng yêu cầu lập chỉ mục lại URL bài trong Search Console (mục 5b).
 
 ### Các bước sửa
 
