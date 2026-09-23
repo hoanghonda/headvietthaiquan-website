@@ -57,5 +57,17 @@
     "icon": "",
     "anh_the_kieu": "contain",
     "anh_the": "/sh-mode-2027-card.jpg"
+  },
+  {
+    "slug": "thay-nhot-may-va-nhot-lap-xe-tay-ga",
+    "tieu_de": "Có nên thay nhớt máy và nhớt láp cùng lúc không?",
+    "danh_muc": "kien-thuc",
+    "mo_ta": "Nhớt máy thay mỗi 1.500–2.000 km, nhớt láp 5.000–6.000 km. Kỹ thuật viên HEAD Việt Thái Quân TP.HCM giải thích khác biệt và dấu hiệu hú láp.",
+    "ngay_dang": "2026-09-23",
+    "ngay_sua": "2026-09-23",
+    "anh": "/nhot-may-nhot-lap.jpg",
+    "alt": "Nhớt máy Pro Honda 10W-30 và nhớt láp Pro Honda cho xe tay ga tại HEAD Việt Thái Quân",
+    "icon": "",
+    "anh_the": "/nhot-may-nhot-lap-the.jpg"
   }
 ]
