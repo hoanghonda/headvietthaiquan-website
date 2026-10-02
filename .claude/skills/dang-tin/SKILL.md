@@ -29,6 +29,7 @@ Viết file HTML fragment (chỉ phần thân: `<h2>`, `<p>`, `<ul>`, `<a>`), l�
 - ≥ 500 chữ (tin sự kiện ngắn: ≥ 300), ≥ 2 `<h2>`, đoạn đầu trả lời thẳng câu hỏi/từ khóa.
 - ≥ 2 link nội bộ trong thân bài (`/xe-may/`, `/dich-vu/`, `/khuyen-mai/`, `/head-viet-thai-quan-1/`, `/head-viet-thai-quan-2/`, trang xe cụ thể).
 - Nhắc khu vực thật: Đông Hòa, Dĩ An, Làng Đại Học, Bình Trưng, Thủ Đức, Cát Lái.
+- **Không tự viết địa chỉ chi nhánh trong thân bài.** Template đã chèn khối "Liên hệ HEAD Việt Thái Quân" (`tools/khoi-chi-nhanh.html`) ở cuối bài, ghi rõ tên chi nhánh kèm phường, địa chỉ, khu vực gần, điện thoại, giờ mở cửa. Khi cần nhắc chi nhánh giữa bài, luôn ghi kèm phường: "chi nhánh 1 (53 QL1K, phường Đông Hòa)", "chi nhánh 2 (111 Nguyễn Duy Trinh, phường Bình Trưng)".
 - Không bịa số liệu; giá xe ghi "tham khảo", thông số lấy từ nội dung người dùng đưa.
 - Không copy nguyên văn nguồn ngoài. Có nguồn thì thêm link `rel="noopener"` và cân nhắc `citation` trong JSON-LD.
 
