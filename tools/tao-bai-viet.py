@@ -118,6 +118,7 @@ def main():
         "CTA_LINK": a.cta_link or cta_link,
         "CTA_TEXT": html.escape(a.cta_text or cta_text, quote=False),
         "NOI_DUNG": noi_dung,
+        "KHOI_CHI_NHANH": "\n".join(l for l in (ROOT / "tools" / "khoi-chi-nhanh.html").read_text(encoding="utf-8").splitlines() if not l.startswith("<!--")),
     }
     out = TEMPLATE.read_text(encoding="utf-8")
     for k, v in values.items():

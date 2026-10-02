@@ -55,6 +55,7 @@ Tham số tùy chọn: `--icon` (icon thẻ tin), `--tieu-de-seo` (thẻ title r
 | Độ dài | ≥ 500 chữ (tin sự kiện ngắn có thể 300–400) |
 | Link nội bộ | ≥ 2 trong thân bài: `/xe-may/`, `/xe-may/vario125/`, `/dich-vu/`, `/khuyen-mai/`, `/head-viet-thai-quan-1/`, `/head-viet-thai-quan-2/` |
 | Địa phương | Nhắc tên khu vực khách hàng thật: Đông Hòa, Dĩ An, Làng Đại Học, Bình Trưng, Thủ Đức, Cát Lái… |
+| Chi nhánh | Không tự viết địa chỉ trong thân bài; template tự chèn khối 2 chi nhánh (`tools/khoi-chi-nhanh.html`). Nhắc giữa bài thì luôn kèm phường. |
 | Ảnh | `alt` mô tả có ý nghĩa, có `width`/`height` |
 | Nguồn | Tin dẫn từ nơi khác: thêm `citation` vào JSON-LD và link nguồn `rel="noopener"` |
 | CTA | Cuối bài 1 nút đỏ: báo giá / dịch vụ / liên hệ chi nhánh |
