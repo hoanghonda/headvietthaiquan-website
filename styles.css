@@ -2,6 +2,8 @@
 :root{
   --red:#CC0000;--red-dark:#A30000;--ink:#1a1a1a;--gray:#555;--line:#e5e5e5;
   --bg:#ffffff;--bg-soft:#f7f7f7;--radius:12px;
+  /* Gradient thuong hieu do -> cam, dung chung cho hero va footer */
+  --grad-brand:linear-gradient(100deg,#9c0d0d 0%,#c3200f 45%,#d9461a 100%);
   --font:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -35,7 +37,7 @@ nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 @media(min-width:861px) and (max-width:1100px){.logo-tx{display:none}nav.main a{padding:8px 9px;font-size:.86rem}}
 
 /* Hero */
-.hero{background:linear-gradient(135deg,var(--red) 0%,var(--red-dark) 70%);color:#fff;padding:56px 0}
+.hero{background:var(--grad-brand);color:#fff;padding:56px 0}
 .hero h1{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;margin-bottom:14px}
 .hero p{max-width:640px;font-size:1.05rem;opacity:.95}
 .hero .cta-row{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
@@ -254,7 +256,7 @@ table.hours th{background:var(--bg-soft)}
 @media(max-width:760px){.callbar{display:flex}body{padding-bottom:52px}}
 
 /* Footer: nen gradient do -> cam, cot trai thong tin cong ty, 3 cot lien ket (nguon: tools/footer.html) */
-footer.site{background:linear-gradient(100deg,#9c0d0d 0%,#c3200f 45%,#d9461a 100%);color:#fff;padding:48px 0 36px;font-size:.95rem}
+footer.site{background:var(--grad-brand);color:#fff;padding:48px 0 36px;font-size:.95rem}
 footer.site a{color:#fff}
 footer.site a:hover{text-decoration:underline}
 .ft-grid{display:grid;gap:36px;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr) minmax(0,1fr) minmax(0,1.2fr)}
