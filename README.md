@@ -38,3 +38,9 @@ File goc: "VTQ Logo 190523-01" (PNG 4167x4167) tren Google Drive cong ty. Khi do
 - Them xe moi: `python3 tools/chuan-hoa-anh-xe.py anh-goc.png ten-xe-card.jpg` roi dung file dich trong the san pham, khong can `--zoom`.
 - `--zoom` chi dung cho anh lay truc tiep tu cdn.honda.com.vn khi khung anh cua Honda lech (LEAD 0.93, SH Mode 0.98, Wave RSX 0.81).
 
+## Footer chung
+
+- Nguon duy nhat: `tools/footer.html` (tieng Viet) va `tools/footer-en.html` (tieng Anh).
+- Sua footer: sua 2 file tren, chay `python3 tools/build-footer.py` (chen vao moi trang + template bai viet), roi `python3 tools/build-en.py`.
+- Logo trang tren nen do: `logo-vtq-mark-white.png`.
+

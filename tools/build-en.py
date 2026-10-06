@@ -16,6 +16,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DOMAIN = "https://headvietthaiquan.vn"
 GT = "https://headvietthaiquan-vn.translate.goog{path}?_x_tr_sl=vi&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp"
+FOOTER_VI = (ROOT / "tools" / "footer.html").read_text(encoding="utf-8").rstrip("\n")
+FOOTER_EN = (ROOT / "tools" / "footer-en.html").read_text(encoding="utf-8").rstrip("\n")
 
 # Trang tiếng Việt -> trang tiếng Anh
 PAGES = {
@@ -167,14 +169,17 @@ PER_PAGE = {
      '<p class="sec-sub">The full Honda range: scooters, underbone (cub) models, manual-clutch bikes and electric scooters. On-the-road prices and offers are updated in store.</p>'),
     ('alt="Honda Vision tại HEAD Việt Thái Quân"', 'alt="Honda Vision at HEAD Viet Thai Quan"'),
     ('alt="Honda LEAD 125 tại HEAD Việt Thái Quân"', 'alt="Honda LEAD 125 at HEAD Viet Thai Quan"'),
-    ('alt="Honda SH Mode tại HEAD Việt Thái Quân"', 'alt="Honda SH Mode at HEAD Viet Thai Quan"'),
+    ('alt="Honda SH Mode 2027 tại HEAD Việt Thái Quân"', 'alt="Honda SH Mode 2027 at HEAD Viet Thai Quan"'),
     ('alt="Honda Vario 125 tại HEAD Việt Thái Quân"', 'alt="Honda Vario 125 at HEAD Viet Thai Quan"'),
     ('<span class="cat">Xe tay ga</span>', '<span class="cat">Scooter</span>'),
-    ('<span class="price">Liên hệ</span>', '<span class="price">Contact us</span>'),
+    ('<span class="price">Từ 32 triệu</span>', '<span class="price">From VND 32 million</span>'),
+    ('<span class="price">Từ 61 triệu</span>', '<span class="price">From VND 61 million</span>'),
+    ('<span class="tag-moi">Xe mới nhất</span>', '<span class="tag-moi">Newest model</span>'),
+    ('<a class="product" href="/tin-tuc/sh-mode-2027-ra-mat/">', '<a class="product" href="%s">' % GT.format(path="/tin-tuc/sh-mode-2027-ra-mat/")),
+    ('<span class="voucher">Nhận ngay voucher 2tr, khi mua xe trong tháng 9</span>', '<span class="voucher">Get a VND 2 million voucher when you buy in September</span>'),
     ('<span class="price">Từ 43 triệu</span>', '<span class="price">From VND 43 million</span>'),
     ('<a class="product" href="/xe-may/vario125/">', '<a class="product" href="%s">' % GT.format(path="/xe-may/vario125/")),
     ('<div class="mt-3"><a class="btn btn-red" href="/xe-may/">Xem tất cả xe &amp; bảng giá</a></div>', '<div class="mt-3"><a class="btn btn-red" href="%s">See all models &amp; prices</a></div>' % GT.format(path="/xe-may/")),
-    ('<h4>HEAD Việt Thái Quân</h4>\n        <p>Đại lý xe máy Honda ủy nhiệm tại TP.HCM.<br>', '<h4>HEAD Viet Thai Quan</h4>\n        <p>Authorised Honda motorcycle dealer in Ho Chi Minh City.<br>'),
 ],
 "head-viet-thai-quan-1/index.html": [
     ('<title>HEAD Việt Thái Quân 1 – 53 QL1K, phường Đông Hòa</title>', '<title>HEAD Viet Thai Quan 1 – 53 National Route 1K, Dong Hoa Ward (Di An)</title>'),
@@ -194,7 +199,6 @@ PER_PAGE = {
      '<div class="card"><h3>New Honda motorcycles</h3><p>Full range of Honda scooters, underbone models, manual-clutch bikes and electric scooters. We handle registration and number plates, and deliver to your door.</p></div>'),
     ('<div class="card"><h3>Mua xe trả góp</h3><p>Thủ tục rõ ràng – đúng quy định, ít chi phí, duyệt nhanh. Mua xe nhẹ gánh, an tâm sử dụng lâu dài.</p></div>',
      '<div class="card"><h3>Financing</h3><p>Clear, fully compliant paperwork, low fees and fast approval. Own your bike with lighter monthly payments.</p></div>'),
-    ('<div><h4>HEAD Việt Thái Quân 1</h4>', '<div><h4>HEAD Viet Thai Quan 1</h4>'),
 ],
 "head-viet-thai-quan-2/index.html": [
     ('<title>HEAD Việt Thái Quân 2 – 111 Nguyễn Duy Trinh, Bình Trưng</title>', '<title>HEAD Viet Thai Quan 2 – 111 Nguyen Duy Trinh, Binh Trung Ward (District 2)</title>'),
@@ -215,7 +219,6 @@ PER_PAGE = {
      '<div class="card"><h3>New Honda motorcycles</h3><p>Showroom with the full range of scooters (SH, SH Mode, LEAD, Vision, Vario, Air Blade), underbone models, manual-clutch bikes and the ICON e: electric scooter.</p></div>'),
     ('<div class="card"><h3>Thu xe cũ – đổi xe mới</h3><p>Định giá xe cũ minh bạch, hỗ trợ lên đời xe Honda mới với chi phí tốt nhất.</p></div>',
      '<div class="card"><h3>Trade-in &amp; upgrade</h3><p>Transparent valuation of your current bike and the best deal on upgrading to a new Honda.</p></div>'),
-    ('<div><h4>HEAD Việt Thái Quân 2</h4>', '<div><h4>HEAD Viet Thai Quan 2</h4>'),
 ],
 }
 
@@ -232,6 +235,16 @@ def build(vi_file):
     src = (ROOT / vi_file).read_text(encoding="utf-8")
     out = src
     errors = []
+    # Footer chung: thay nguyên khối bằng bản tiếng Anh (nguồn: tools/footer.html / footer-en.html)
+    if FOOTER_VI not in out:
+        errors.append("footer khác tools/footer.html – chạy python3 tools/build-footer.py trước")
+    out = out.replace(FOOTER_VI, FOOTER_EN)
+    # Khối "Tin tức mới" trên trang chủ sinh tự động theo bài mới nhất -> bản EN thay bằng khối gọn,
+    # dẫn sang mục tin tức qua Google Translate (không phải cập nhật bảng dịch mỗi lần đăng bài)
+    out = re.sub(r'<h2 class="sec">Tin tức mới</h2>.*?<!-- BAI-VIET-TRANG-CHU:END -->\s*</div>\s*<div class="mt-3"><a class="btn btn-red" href="/tin-tuc/">Xem tất cả tin tức</a></div>',
+                 '<h2 class="sec">Latest news</h2>\n    <p class="sec-sub">New Honda models, riding and maintenance tips, and community activities from our stores. Our news is published in Vietnamese; open it with automatic English translation.</p>\n'
+                 '    <div class="mt-2"><a class="btn btn-red" href="%s">Read our news in English</a></div>' % GT.format(path="/tin-tuc/"),
+                 out, flags=re.S)
     for old, new in PER_PAGE[vi_file] + COMMON:   # riêng trước, chung sau (chuỗi dài trước)
         if old not in out:
             # Chuỗi chung có thể không có ở mọi trang; chuỗi riêng thì bắt buộc
