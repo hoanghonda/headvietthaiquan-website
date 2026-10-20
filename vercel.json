@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/xe-may/icon-e", "destination": "/xe-dien/icon-e/", "permanent": true },
+    { "source": "/xe-may/icon-e/", "destination": "/xe-dien/icon-e/", "permanent": true }
+  ]
+}
