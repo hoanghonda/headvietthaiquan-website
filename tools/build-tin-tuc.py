@@ -43,11 +43,14 @@ STATIC_PAGES = [
     ("/head-viet-thai-quan-2/", "2026-09-01", "0.9"),
     ("/xe-may/", "2026-09-01", "0.8"),
     ("/xe-may/vario125/", "2026-09-01", "0.8"),
+    ("/xe-may/icon-e/", "2026-10-20", "0.8"),
+    ("/xe-dien/", "2026-10-20", "0.8"),
     ("/dich-vu/", "2026-09-01", "0.8"),
     ("/khuyen-mai/", "2026-09-01", "0.9"),
     ("/en/", "2026-09-11", "0.8"),
     ("/en/head-viet-thai-quan-1/", "2026-09-11", "0.7"),
     ("/en/head-viet-thai-quan-2/", "2026-09-11", "0.7"),
+    ("/en/honda-icon-e/", "2026-10-20", "0.6"),
 ]
 
 THUMB_DIR = ROOT / "thumbs"   # ảnh thẻ tin 640x400, sinh tự động từ ảnh của bài
