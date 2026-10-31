@@ -24,11 +24,14 @@ PAGES = {
     "index.html": "en/index.html",
     "head-viet-thai-quan-1/index.html": "en/head-viet-thai-quan-1/index.html",
     "head-viet-thai-quan-2/index.html": "en/head-viet-thai-quan-2/index.html",
+    "xe-dien/index.html": "en/honda-electric-scooters/index.html",
 }
 EN_PATH = {"index.html": "/en/", "head-viet-thai-quan-1/index.html": "/en/head-viet-thai-quan-1/",
-           "head-viet-thai-quan-2/index.html": "/en/head-viet-thai-quan-2/"}
+           "head-viet-thai-quan-2/index.html": "/en/head-viet-thai-quan-2/",
+           "xe-dien/index.html": "/en/honda-electric-scooters/"}
 VI_PATH = {"index.html": "/", "head-viet-thai-quan-1/index.html": "/head-viet-thai-quan-1/",
-           "head-viet-thai-quan-2/index.html": "/head-viet-thai-quan-2/"}
+           "head-viet-thai-quan-2/index.html": "/head-viet-thai-quan-2/",
+           "xe-dien/index.html": "/xe-dien/"}
 
 GLOBE = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.9 9h-3.1a15.6 '
          '15.6 0 0 0-1.4-6A8 8 0 0 1 19.9 11ZM12 4c1.1 1.4 2.2 4 2.5 7h-5C9.8 8 10.9 5.4 12 4ZM4.1 13h3.1c.1 2.2.6 4.3 1.4 '
@@ -44,7 +47,7 @@ COMMON = [
     ('<a href="/" class="active">Trang chủ</a>', '<a href="/en/" class="active">Home</a>'),
     ('<a href="/">Trang chủ</a>', '<a href="/en/">Home</a>'),
     ('<a href="/xe-may/">Xe máy</a>', '<a href="%s">Motorcycles</a>' % GT.format(path="/xe-may/")),
-    ('<a href="/xe-dien/">Xe điện</a>', '<a href="/en/honda-icon-e/">Electric</a>'),
+    ('<a href="/xe-dien/">Xe điện</a>', '<a href="/en/honda-electric-scooters/">Electric</a>'),
     ('<a href="/dich-vu/">Dịch vụ</a>', '<a href="%s">Services</a>' % GT.format(path="/dich-vu/")),
     ('<a href="/khuyen-mai/">Khuyến mãi</a>', '<a href="%s">Promotions</a>' % GT.format(path="/khuyen-mai/")),
     ('<a href="/head-viet-thai-quan-1/" class="active">Chi nhánh 1</a>', '<a href="/en/head-viet-thai-quan-1/" class="active">Branch 1</a>'),
@@ -221,6 +224,45 @@ PER_PAGE = {
     ('<div class="card"><h3>Thu xe cũ – đổi xe mới</h3><p>Định giá xe cũ minh bạch, hỗ trợ lên đời xe Honda mới với chi phí tốt nhất.</p></div>',
      '<div class="card"><h3>Trade-in &amp; upgrade</h3><p>Transparent valuation of your current bike and the best deal on upgrading to a new Honda.</p></div>'),
 ],
+"xe-dien/index.html": [
+    ('<title>Xe điện Honda – ICON e: giá &amp; thuê pin | HEAD Việt Thái Quân</title>',
+     '<title>Honda Electric Scooters in HCMC – ICON e: Price &amp; Battery Rental | HEAD Viet Thai Quan</title>'),
+    ('<meta name="description" content="Xe máy điện Honda chính hãng tại HEAD Việt Thái Quân TP.HCM: ICON e: từ 19,49 triệu, thuê pin 250.000đ/tháng, đi đến 71 km/lần sạc. Có xe giao ngay.">',
+     '<meta name="description" content="Genuine Honda electric scooters at HEAD Viet Thai Quan, Ho Chi Minh City: ICON e: from VND 19.49M, battery rental VND 250k/month, up to 71 km per charge. In stock now, English-speaking staff.">'),
+    ('<span>Mua xe điện ICON e: tặng ngay 2 triệu đồng tiền mặt – đến 31/10/2026</span>',
+     '<span>Buy an ICON e: electric scooter and get VND 2 million cash back – until 31/10/2026</span>'),
+    ('<a href="/xe-dien/" class="active">Xe điện</a>', '<a href="/en/honda-electric-scooters/" class="active">Electric</a>'),
+    ('<p style="font-size:.9rem;opacity:.9;margin-bottom:8px"><a href="/">Trang chủ</a> › Xe điện</p>',
+     '<p style="font-size:.9rem;opacity:.9;margin-bottom:8px"><a href="/en/">Home</a> › Electric scooters</p>'),
+    ('<h1>Xe máy điện Honda tại HEAD Việt Thái Quân</h1>', '<h1>Honda electric scooters at HEAD Viet Thai Quan</h1>'),
+    ('<p>Xe điện Honda chính hãng: êm, không xăng, sạc tại nhà. Thuê pin hoặc mua pin kèm xe, bảo dưỡng chính hãng ngay tại cửa hàng ở phường Đông Hòa và phường Bình Trưng, TP.HCM.</p>',
+     '<p>Genuine Honda electric scooters: quiet, no petrol, charge at home from a normal socket. Rent the battery or buy it with the scooter, and get genuine Honda servicing at our stores in Dong Hoa Ward and Binh Trung Ward (formerly District 2), Ho Chi Minh City. English-speaking support and free test rides at Branch 2.</p>'),
+    ('<a class="btn btn-white" href="tel:+842877726789">☎ Nhận báo giá lăn bánh</a>', '<a class="btn btn-white" href="tel:+842877726789">☎ Get an on-the-road quote</a>'),
+    ('<a class="btn btn-outline" href="/khuyen-mai/">Xem khuyến mãi tháng này</a>', '<a class="btn btn-outline" href="/en/honda-icon-e/">ICON e: specs &amp; battery options</a>'),
+    ('<h2 class="sec" id="xe-dien">Xe điện</h2>', '<h2 class="sec" id="electric">Honda ICON e: – choose your colour</h2>'),
+    ('href="/xe-dien/icon-e/"', 'href="/en/honda-icon-e/"'),
+    ('<span class="cat">Xe điện · Thể thao</span>', '<span class="cat">Electric · Sport</span>'),
+    ('<span class="cat">Xe điện · Cao cấp</span>', '<span class="cat">Electric · Deluxe</span>'),
+    ('<span class="cat">Xe điện · Đặc biệt</span>', '<span class="cat">Electric · Special</span>'),
+    ('<h3>ICON e: Xanh</h3>', '<h3>ICON e: Blue</h3>'),
+    ('<h3>ICON e: Xám</h3>', '<h3>ICON e: Grey</h3>'),
+    ('<h3>ICON e: Trắng xám</h3>', '<h3>ICON e: White &amp; Grey</h3>'),
+    ('<h3>ICON e: Đỏ xám</h3>', '<h3>ICON e: Red &amp; Grey</h3>'),
+    ('<h3>ICON e: Đen xám</h3>', '<h3>ICON e: Black &amp; Grey</h3>'),
+    ('<h3>ICON e: Bạc nhám</h3>', '<h3>ICON e: Matte Silver</h3>'),
+    ('<span class="price">19,89 triệu</span>', '<span class="price">VND 19,890,000</span>'),
+    ('<span class="price">19,69 triệu</span>', '<span class="price">VND 19,690,000</span>'),
+    ('<span class="price">19,49 triệu</span>', '<span class="price">VND 19,490,000</span>'),
+    ('<span class="voucher voucher-ev">Tặng 2 triệu tiền mặt đến 31/10</span>', '<span class="voucher voucher-ev">VND 2M cash back until 31/10</span>'),
+    ('alt="Honda ICON e: phiên bản Thể thao màu xanh - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Sport edition in blue - electric scooter at HEAD Viet Thai Quan"'),
+    ('alt="Honda ICON e: phiên bản Thể thao màu xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Sport edition in grey - electric scooter at HEAD Viet Thai Quan"'),
+    ('alt="Honda ICON e: phiên bản Cao cấp màu trắng xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Deluxe edition in white and grey - electric scooter at HEAD Viet Thai Quan"'),
+    ('alt="Honda ICON e: phiên bản Cao cấp màu đỏ xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Deluxe edition in red and grey - electric scooter at HEAD Viet Thai Quan"'),
+    ('alt="Honda ICON e: phiên bản Cao cấp màu đen xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Deluxe edition in black and grey - electric scooter at HEAD Viet Thai Quan"'),
+    ('alt="Honda ICON e: phiên bản Đặc biệt màu bạc nhám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Special edition in matte silver - electric scooter at HEAD Viet Thai Quan"'),
+    ('<div class="note mt-3">Giá hiển thị là giá xe tham khảo, chưa gồm pin, chi phí đăng ký, biển số, bảo hiểm. Liên hệ cửa hàng để nhận <strong>báo giá lăn bánh chính xác</strong> và chi phí thuê/mua pin. Tìm xe xăng? Xem <a href="/xe-may/">bảng giá xe máy</a>.</div>',
+     '<div class="note mt-3">Prices shown are reference prices for the scooter including VAT, excluding the battery, registration, number plate and insurance. Battery rental is VND 250,000/month (VND 2,000,000 deposit), or buy the battery for VND 9,000,000. Call <a href="tel:+842877726789">028 7772 6789</a> for an <strong>exact on-the-road quote</strong> – see the <a href="/en/honda-icon-e/">ICON e: page</a> for specs, range and FAQs. Looking for a petrol scooter? See our <a href="%s">motorcycle price list</a>.</div>' % GT.format(path="/xe-may/")),
+],
 }
 
 VI_CHARS = re.compile(r"[ăâđêôơưĂÂĐÊÔƠƯ\u0300-\u036f"
@@ -254,7 +296,8 @@ def build(vi_file):
             continue
         out = out.replace(old, new)
     vi_path, en_path = VI_PATH[vi_file], EN_PATH[vi_file]
-    # canonical + hreflang
+    # canonical + hreflang (bỏ hreflang có sẵn ở trang tiếng Việt để không bị lặp)
+    out = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n', '', out)
     out = out.replace(f'<link rel="canonical" href="{DOMAIN}{vi_path}">',
                       f'<link rel="canonical" href="{DOMAIN}{en_path}">\n'
                       f'<link rel="alternate" hreflang="en" href="{DOMAIN}{en_path}">\n'
