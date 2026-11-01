@@ -234,9 +234,14 @@ PER_PAGE = {
     ('<a href="/xe-dien/" class="active">Xe điện</a>', '<a href="/en/honda-electric-scooters/" class="active">Electric</a>'),
     ('<p style="font-size:.9rem;opacity:.9;margin-bottom:8px"><a href="/">Trang chủ</a> › Xe điện</p>',
      '<p style="font-size:.9rem;opacity:.9;margin-bottom:8px"><a href="/en/">Home</a> › Electric scooters</p>'),
-    ('<h1>Xe máy điện Honda tại HEAD Việt Thái Quân</h1>', '<h1>Honda electric scooters at HEAD Viet Thai Quan</h1>'),
+    ('<h1>Xe máy điện Honda tại HEAD Việt Thái Quân</h1>', '<h1>The ICON e: – Honda\'s first licence-free electric moped</h1>'),
     ('<p>Xe điện Honda chính hãng: êm, không xăng, sạc tại nhà. Thuê pin hoặc mua pin kèm xe, bảo dưỡng chính hãng ngay tại cửa hàng ở phường Đông Hòa và phường Bình Trưng, TP.HCM.</p>',
-     '<p>Genuine Honda electric scooters: quiet, no petrol, charge at home from a normal socket. Rent the battery or buy it with the scooter, and get genuine Honda servicing at our stores in Dong Hoa Ward and Binh Trung Ward (formerly District 2), Ho Chi Minh City. English-speaking support and free test rides at Branch 2.</p>'),
+     '<ul class="hero-feats">'
+     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h5M7 14h3M3 3l18 18"/></svg>No licence</li>'
+     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></svg>70+ km range</li>'
+     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 5 9 5 19"/><path d="M20 4c0 8-5 13-13 13"/><path d="M5 19l-2 2"/></svg>Super light</li>'
+     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="15" rx="2"/><path d="M9 3h6v3H9zM10 11h4M10 15h4"/></svg>Portable battery</li>'
+     '</ul>'),
     # Trang EN: moi nut goi dan ve so tu van tieng Anh 083 456 7001 (footer giu so cua hang)
     ('<span><a href="tel:+842877726789"><img class="ico-xe" src="/icon-xe-may.svg" alt="" width="18" height="18">028 7772 6789</a>',
      '<span><a href="tel:+84834567001"><img class="ico-xe" src="/icon-xe-may.svg" alt="" width="18" height="18">English hotline 083 456 7001</a>'),
