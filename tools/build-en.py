@@ -242,7 +242,7 @@ PER_PAGE = {
      '<ul class="hero-feats">'
      '<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h5M7 14h3M3 3l18 18"/></svg>No licence</li>'
      '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></svg>70+ km range</li>'
-     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 5 9 5 19"/><path d="M20 4c0 8-5 13-13 13"/><path d="M5 19l-2 2"/></svg><span>Super light <small>87 kg</small></span></li>'
+     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 5 9 5 19"/><path d="M20 4c0 8-5 13-13 13"/><path d="M5 19l-2 2"/></svg><span>Super light <small>89 kg</small></span></li>'
      '<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="15" rx="2"/><path d="M9 3h6v3H9zM10 11h4M10 15h4"/></svg>Portable battery</li>'
      '</ul>'),
     # Trang EN: moi nut goi dan ve so tu van tieng Anh 083 456 7001 (footer giu so cua hang)
