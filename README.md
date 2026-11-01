@@ -25,7 +25,8 @@ File goc: "VTQ Logo 190523-01" (PNG 4167x4167) tren Google Drive cong ty. Khi do
 
 ## Tieng Anh
 
-- Trang chu va 2 trang chi nhanh co ban tieng Anh rieng: `/en/`, `/en/head-viet-thai-quan-1/`, `/en/head-viet-thai-quan-2/`.
+- Trang chu, 2 trang chi nhanh va trang Xe dien co ban tieng Anh rieng: `/en/`, `/en/head-viet-thai-quan-1/`, `/en/head-viet-thai-quan-2/`, `/en/honda-electric-scooters/`.
+  Trang ICON e: tieng Anh `/en/honda-icon-e/` viet tay (khong sinh tu script).
   Sinh tu trang tieng Viet bang `python3 tools/build-en.py` (bang dich nam trong script; chay lai sau khi sua 3 trang nay,
   script se bao loi neu con sot tieng Viet hoac chuoi goc da doi).
 - Cac trang con lai: nut English o thanh tren cung mo trang do qua Google Translate (headvietthaiquan-vn.translate.goog).
