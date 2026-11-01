@@ -237,7 +237,11 @@ PER_PAGE = {
     ('<h1>Xe máy điện Honda tại HEAD Việt Thái Quân</h1>', '<h1>Honda electric scooters at HEAD Viet Thai Quan</h1>'),
     ('<p>Xe điện Honda chính hãng: êm, không xăng, sạc tại nhà. Thuê pin hoặc mua pin kèm xe, bảo dưỡng chính hãng ngay tại cửa hàng ở phường Đông Hòa và phường Bình Trưng, TP.HCM.</p>',
      '<p>Genuine Honda electric scooters: quiet, no petrol, charge at home from a normal socket. Rent the battery or buy it with the scooter, and get genuine Honda servicing at our stores in Dong Hoa Ward and Binh Trung Ward (formerly District 2), Ho Chi Minh City. English-speaking support and free test rides at Branch 2.</p>'),
-    ('<a class="btn btn-white" href="tel:+842877726789">☎ Nhận báo giá lăn bánh</a>', '<a class="btn btn-white" href="tel:+842877726789">☎ Get an on-the-road quote</a>'),
+    # Trang EN: moi nut goi dan ve so tu van tieng Anh 083 456 7001 (footer giu so cua hang)
+    ('<span><a href="tel:+842877726789"><img class="ico-xe" src="/icon-xe-may.svg" alt="" width="18" height="18">028 7772 6789</a>',
+     '<span><a href="tel:+84834567001"><img class="ico-xe" src="/icon-xe-may.svg" alt="" width="18" height="18">English hotline 083 456 7001</a>'),
+    ('<a class="btn btn-white" href="tel:+842877726789">☎ Nhận báo giá lăn bánh</a>', '<a class="btn btn-white" href="tel:+84834567001">☎ Call 083 456 7001 for a quote</a>'),
+    ('<a class="call" href="tel:+842877726789">☎ Gọi ngay</a>', '<a class="call" href="tel:+84834567001">☎ Call now</a>'),
     ('<a class="btn btn-outline" href="/khuyen-mai/">Xem khuyến mãi tháng này</a>', '<a class="btn btn-outline" href="/en/honda-icon-e/">ICON e: specs &amp; battery options</a>'),
     ('<h2 class="sec" id="xe-dien">Xe điện</h2>', '<h2 class="sec" id="electric">Honda ICON e: – choose your colour</h2>'),
     ('href="/xe-dien/icon-e/"', 'href="/en/honda-icon-e/"'),
@@ -261,7 +265,7 @@ PER_PAGE = {
     ('alt="Honda ICON e: phiên bản Cao cấp màu đen xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Deluxe edition in black and grey - electric scooter at HEAD Viet Thai Quan"'),
     ('alt="Honda ICON e: phiên bản Đặc biệt màu bạc nhám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Special edition in matte silver - electric scooter at HEAD Viet Thai Quan"'),
     ('<div class="note mt-3">Giá hiển thị là giá xe tham khảo, chưa gồm pin, chi phí đăng ký, biển số, bảo hiểm. Liên hệ cửa hàng để nhận <strong>báo giá lăn bánh chính xác</strong> và chi phí thuê/mua pin. Tìm xe xăng? Xem <a href="/xe-may/">bảng giá xe máy</a>.</div>',
-     '<div class="note mt-3">Prices shown are reference prices for the scooter including VAT, excluding the battery, registration, number plate and insurance. Battery rental is VND 250,000/month (VND 2,000,000 deposit), or buy the battery for VND 9,000,000. Call <a href="tel:+842877726789">028 7772 6789</a> for an <strong>exact on-the-road quote</strong> – see the <a href="/en/honda-icon-e/">ICON e: page</a> for specs, range and FAQs. Looking for a petrol scooter? See our <a href="%s">motorcycle price list</a>.</div>' % GT.format(path="/xe-may/")),
+     '<div class="note mt-3">Prices shown are reference prices for the scooter including VAT, excluding the battery, registration, number plate and insurance. Battery rental is VND 250,000/month (VND 2,000,000 deposit), or buy the battery for VND 9,000,000. Call <a href="tel:+84834567001">083 456 7001</a> (English) for an <strong>exact on-the-road quote</strong> – see the <a href="/en/honda-icon-e/">ICON e: page</a> for specs, range and FAQs. Looking for a petrol scooter? See our <a href="%s">motorcycle price list</a>.</div>' % GT.format(path="/xe-may/")),
 ],
 }
 
