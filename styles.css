@@ -56,12 +56,29 @@ nav.main a:is([href="/xe-dien/"],[href="/en/honda-electric-scooters/"],[href="/e
 .hero h1{font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;margin-bottom:14px}
 .hero p{max-width:640px;font-size:1.05rem;opacity:.95}
 /* Trang EN xe dien: 4 diem noi bat dang the kinh */
-.hero-feats{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(4,max-content);gap:12px}
+.hero-feats{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:560px}
 .hero-feats li{display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;font-weight:700;font-size:1.05rem;
-  background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.35);
+  background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.28);
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
 .hero-feats svg{width:26px;height:26px;flex:none;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-@media(max-width:760px){.hero-feats{grid-template-columns:1fr 1fr}.hero-feats li{font-size:.95rem;padding:10px 12px}}
+.hero-feats small{font-size:.85em;font-weight:600;opacity:.85;white-space:nowrap}
+@media(max-width:760px){.hero-feats li{font-size:.95rem;padding:10px 12px}}
+/* Hero 2 cot: chu ben trai, anh xe ben phai (xuong duoi tieu de tren dien thoai) */
+.hero-split{display:grid;grid-template-columns:minmax(0,1fr) 400px;column-gap:40px;align-items:start}
+.hero-split>*{grid-column:1}
+.hero-split .hero-bike{grid-column:2;grid-row:1 / span 6;align-self:center;margin:0}
+.hero-bike img{display:block;width:100%;height:auto;border-radius:20px;background:#fff;box-shadow:0 20px 50px rgba(5,30,90,.35)}
+.hero-price{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-size:1.15rem}
+.hero-offer{padding:6px 14px;border-radius:999px;background:linear-gradient(90deg,#ffd54a,#ffb300);color:#7a1b00;font-weight:800;font-size:.9rem}
+@media(max-width:900px){.hero-split{grid-template-columns:1fr}.hero-split .hero-bike{grid-column:1;grid-row:auto;margin:18px 0 0}
+  .hero-bike img{max-width:420px;aspect-ratio:16/10;object-fit:cover}}
+/* Bang chi phi: xe / thue pin / mua pin */
+.cost-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cost{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid #cfe0f5;border-radius:var(--radius);background:#f4f8fe}
+.cost-k{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#0b3d91}
+.cost strong{font-size:1.3rem}
+.cost span:last-child{font-size:.9rem;color:var(--gray)}
+@media(max-width:760px){.cost-grid{grid-template-columns:1fr}}
 .hero .cta-row{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
 /* Anh poster/banner chuong trinh khuyen mai ngay trong hero, giua mo ta va nut CTA */
 .hero-poster{display:block;width:100%;margin-top:26px;border-radius:var(--radius);box-shadow:0 12px 32px rgba(0,0,0,.25)}
@@ -159,7 +176,7 @@ a.product:hover{box-shadow:0 6px 24px rgba(0,0,0,.10);transform:translateY(-2px)
 @keyframes voucher-shine{from{background-position:0 0}to{background-position:200% 0}}
 /* Voucher xe dien: kinh long xanh (liquid glass) */
 .voucher.voucher-ev{position:relative;overflow:hidden;color:#fff;text-shadow:0 1px 2px rgba(8,40,110,.35);
-  background:linear-gradient(135deg,rgba(30,136,229,.78),rgba(13,71,161,.88));
+  background:linear-gradient(135deg,rgba(21,101,192,.92),rgba(11,61,145,.95));
   -webkit-backdrop-filter:blur(10px) saturate(160%);backdrop-filter:blur(10px) saturate(160%);
   border-top:1px solid rgba(255,255,255,.55);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -8px 16px rgba(5,30,90,.25),inset 0 10px 18px rgba(255,255,255,.18);

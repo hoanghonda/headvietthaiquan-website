@@ -232,14 +232,17 @@ PER_PAGE = {
     ('<span>Mua xe điện ICON e: tặng ngay 2 triệu đồng tiền mặt – đến 31/12/2026</span>',
      '<span>Buy an ICON e: electric scooter and get VND 2 million cash back – until 31/12/2026</span>'),
     ('<a href="/xe-dien/" class="active">Xe điện</a>', '<a href="/en/honda-electric-scooters/" class="active">Electric</a>'),
+    ('<div class="hero hero-ev">\n  <div class="container">', '<div class="hero hero-ev">\n  <div class="container hero-split">'),
     ('<p style="font-size:.9rem;opacity:.9;margin-bottom:8px"><a href="/">Trang chủ</a> › Xe điện</p>',
      '<p style="font-size:.9rem;opacity:.9;margin-bottom:8px"><a href="/en/">Home</a> › Electric scooters</p>'),
-    ('<h1>Xe máy điện Honda tại HEAD Việt Thái Quân</h1>', '<h1>The ICON e: – Honda\'s first licence-free electric moped</h1>'),
+    ('<h1>Xe máy điện Honda tại HEAD Việt Thái Quân</h1>', '<h1>The ICON e: – Honda\'s first licence-free electric moped</h1>\n'
+     '    <p class="hero-price">From <strong>VND 19,490,000</strong> <span class="hero-offer">🎁 VND 2M cash back until 31/12</span></p>\n'
+     '    <figure class="hero-bike"><img src="/icon-e.jpg" alt="Honda ICON e: electric moped in green" width="1000" height="750"></figure>'),
     ('<p>Xe điện Honda chính hãng: êm, không xăng, sạc tại nhà. Thuê pin hoặc mua pin kèm xe, bảo dưỡng chính hãng ngay tại cửa hàng ở phường Đông Hòa và phường Bình Trưng, TP.HCM.</p>',
      '<ul class="hero-feats">'
      '<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h5M7 14h3M3 3l18 18"/></svg>No licence</li>'
      '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 18l4-6"/></svg>70+ km range</li>'
-     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 5 9 5 19"/><path d="M20 4c0 8-5 13-13 13"/><path d="M5 19l-2 2"/></svg>Super light</li>'
+     '<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 5 9 5 19"/><path d="M20 4c0 8-5 13-13 13"/><path d="M5 19l-2 2"/></svg><span>Super light <small>89 kg</small></span></li>'
      '<li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="15" rx="2"/><path d="M9 3h6v3H9zM10 11h4M10 15h4"/></svg>Portable battery</li>'
      '</ul>'),
     # Trang EN: moi nut goi dan ve so tu van tieng Anh 083 456 7001 (footer giu so cua hang)
@@ -248,11 +251,17 @@ PER_PAGE = {
     ('<a class="btn btn-white" href="tel:+842877726789">☎ Nhận báo giá lăn bánh</a>', '<a class="btn btn-white" href="tel:+84834567001">☎ Call 083 456 7001 for a quote</a>'),
     ('<a class="call" href="tel:+842877726789">☎ Gọi ngay</a>', '<a class="call" href="tel:+84834567001">☎ Call now</a>'),
     ('<a class="btn btn-outline" href="/khuyen-mai/">Xem khuyến mãi tháng này</a>', '<a class="btn btn-outline" href="/en/honda-icon-e/">ICON e: specs &amp; battery options</a>'),
-    ('<h2 class="sec" id="xe-dien">Xe điện</h2>', '<h2 class="sec" id="electric">Honda ICON e: – choose your colour</h2>'),
+    ('<h2 class="sec" id="xe-dien">Xe điện</h2>', '<h2 class="sec" id="price">What it costs</h2>\n'
+     '    <div class="cost-grid mt-2">\n'
+     '      <div class="cost"><span class="cost-k">Scooter</span><strong>from VND 19,490,000</strong><span>incl. VAT, without battery</span></div>\n'
+     '      <div class="cost"><span class="cost-k">Rent the battery</span><strong>VND 250,000/month</strong><span>+ VND 2,000,000 deposit</span></div>\n'
+     '      <div class="cost"><span class="cost-k">Or buy the battery</span><strong>VND 9,000,000</strong><span>one-off, no monthly fee</span></div>\n'
+     '    </div>\n'
+     '    <h2 class="sec" id="electric" style="margin-top:44px">Six colours, three editions</h2>'),
     ('href="/xe-dien/icon-e/"', 'href="/en/honda-icon-e/"'),
-    ('<span class="cat">Xe điện · Thể thao</span>', '<span class="cat">Electric · Sport</span>'),
-    ('<span class="cat">Xe điện · Cao cấp</span>', '<span class="cat">Electric · Deluxe</span>'),
-    ('<span class="cat">Xe điện · Đặc biệt</span>', '<span class="cat">Electric · Special</span>'),
+    ('<span class="cat">Xe điện · Thể thao</span>', '<span class="cat">Sport edition</span>'),
+    ('<span class="cat">Xe điện · Cao cấp</span>', '<span class="cat">Deluxe edition</span>'),
+    ('<span class="cat">Xe điện · Đặc biệt</span>', '<span class="cat">Special edition</span>'),
     ('<h3>ICON e: Xanh</h3>', '<h3>ICON e: Green</h3>'),
     ('<h3>ICON e: Xám</h3>', '<h3>ICON e: Grey</h3>'),
     ('<h3>ICON e: Trắng xám</h3>', '<h3>ICON e: White &amp; Grey</h3>'),
@@ -262,7 +271,7 @@ PER_PAGE = {
     ('<span class="price">19,89 triệu</span>', '<span class="price">VND 19,890,000</span>'),
     ('<span class="price">19,69 triệu</span>', '<span class="price">VND 19,690,000</span>'),
     ('<span class="price">19,49 triệu</span>', '<span class="price">VND 19,490,000</span>'),
-    ('<span class="voucher voucher-ev">Tặng 2 triệu tiền mặt đến 31/12</span>', '<span class="voucher voucher-ev">VND 2M cash back until 31/12</span>'),
+    ('<span class="voucher voucher-ev">Tặng 2 triệu tiền mặt đến 31/12</span>', ''),
     ('alt="Honda ICON e: phiên bản Thể thao màu xanh - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Sport edition in green - electric scooter at HEAD Viet Thai Quan"'),
     ('alt="Honda ICON e: phiên bản Thể thao màu xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Sport edition in grey - electric scooter at HEAD Viet Thai Quan"'),
     ('alt="Honda ICON e: phiên bản Cao cấp màu trắng xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Deluxe edition in white and grey - electric scooter at HEAD Viet Thai Quan"'),
@@ -270,7 +279,7 @@ PER_PAGE = {
     ('alt="Honda ICON e: phiên bản Cao cấp màu đen xám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Deluxe edition in black and grey - electric scooter at HEAD Viet Thai Quan"'),
     ('alt="Honda ICON e: phiên bản Đặc biệt màu bạc nhám - xe máy điện tại HEAD Việt Thái Quân"', 'alt="Honda ICON e: Special edition in matte silver - electric scooter at HEAD Viet Thai Quan"'),
     ('<div class="note mt-3">Giá hiển thị là giá xe tham khảo, chưa gồm pin, chi phí đăng ký, biển số, bảo hiểm. Liên hệ cửa hàng để nhận <strong>báo giá lăn bánh chính xác</strong> và chi phí thuê/mua pin. Tìm xe xăng? Xem <a href="/xe-may/">bảng giá xe máy</a>.</div>',
-     '<div class="note mt-3">Prices shown are reference prices for the scooter including VAT, excluding the battery, registration, number plate and insurance. Battery rental is VND 250,000/month (VND 2,000,000 deposit), or buy the battery for VND 9,000,000. Call <a href="tel:+84834567001">083 456 7001</a> (English) for an <strong>exact on-the-road quote</strong> – see the <a href="/en/honda-icon-e/">ICON e: page</a> for specs, range and FAQs. Looking for a petrol scooter? See our <a href="%s">motorcycle price list</a>.</div>' % GT.format(path="/xe-may/")),
+     '<p class="mt-3" style="color:var(--gray);font-size:.88rem">Registration, number plate and insurance are extra. Call <a href="tel:+84834567001"><strong>083 456 7001</strong></a> (English) for an exact on-the-road quote, or see the <a href="/en/honda-icon-e/">ICON e: page</a> for specs, range and FAQs. Looking for a petrol scooter? See our <a href="%s">motorcycle price list</a>.</p>' % GT.format(path="/xe-may/")),
 ],
 }
 
