@@ -364,3 +364,8 @@ footer.site .copy{margin-top:36px;padding-top:16px;border-top:1px solid rgba(255
 .cn-o .cn-lh a{color:var(--red);font-weight:700}
 .cn-o .cn-lh span{color:var(--gray);font-size:.86rem}
 @media(max-width:600px){.cn-lienhe{grid-template-columns:1fr}}
+
+/* Thẻ chi nhánh: nút đồng bộ, luôn nằm đáy thẻ */
+.card-cn p{line-height:1.7;margin-bottom:20px}
+.card-cn p a{white-space:nowrap}
+.card-cn .btn{margin-top:auto;align-self:flex-start;min-width:180px;text-align:center}
