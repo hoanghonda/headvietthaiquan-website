@@ -31,7 +31,7 @@ File goc: "VTQ Logo 190523-01" (PNG 4167x4167) tren Google Drive cong ty. Khi do
   script se bao loi neu con sot tieng Viet hoac chuoi goc da doi).
 - Cac trang con lai: nut English o thanh tren cung mo trang do qua Google Translate (headvietthaiquan-vn.translate.goog).
   Bai viet moi tao bang tools/tao-bai-viet.py tu dong co nut nay.
-- Trang EN va VI lien ket nhau bang hreflang; sitemap co 3 URL /en/.
+- Trang EN va VI lien ket nhau bang hreflang; sitemap co 5 URL /en/.
 
 ## Anh xe cho the san pham
 

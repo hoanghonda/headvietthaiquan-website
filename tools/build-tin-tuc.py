@@ -37,11 +37,13 @@ ICON_DIR = ROOT / "icons"
 ICON_MAC_DINH = {}  # tạm tắt icon mặc định cho tới khi có bộ icon mới (thiết kế lại trên Figma)
 
 # Các trang cố định trong sitemap (ngoài bài viết & chuyên mục, được sinh tự động).
+# Khi thêm trang tĩnh mới hoặc sửa lastmod: sửa Ở ĐÂY rồi chạy lại script, không sửa tay sitemap.xml.
 STATIC_PAGES = [
     ("/", "2026-09-01", "1.0"),
     ("/head-viet-thai-quan-1/", "2026-09-01", "0.9"),
     ("/head-viet-thai-quan-2/", "2026-09-01", "0.9"),
-    ("/xe-may/", "2026-09-01", "0.8"),
+    ("/xe-may/", "2026-11-07", "0.8"),
+    ("/xe-may/sh2027/", "2026-11-07", "0.8"),
     ("/xe-may/vario125/", "2026-09-01", "0.8"),
     ("/xe-dien/icon-e/", "2026-10-20", "0.8"),
     ("/xe-dien/", "2026-10-20", "0.8"),
@@ -50,6 +52,7 @@ STATIC_PAGES = [
     ("/en/", "2026-09-11", "0.8"),
     ("/en/head-viet-thai-quan-1/", "2026-09-11", "0.7"),
     ("/en/head-viet-thai-quan-2/", "2026-09-11", "0.7"),
+    ("/en/honda-electric-scooters/", "2026-10-31", "0.6"),
     ("/en/honda-icon-e/", "2026-10-20", "0.6"),
 ]
 
