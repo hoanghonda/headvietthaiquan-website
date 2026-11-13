@@ -27,8 +27,8 @@ header.site .container{display:flex;align-items:center;justify-content:space-bet
 .logo-tx strong{font-weight:700;font-size:1.02rem;color:var(--ink)}
 /* Dong mo ta can deu hai dau de dai dung bang dong ten phia tren */
 .logo-tx small{display:block;font-weight:600;font-size:.63rem;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;text-align:justify;text-align-last:justify}
-nav.main{display:flex;gap:4px;flex-wrap:wrap}
-nav.main a{padding:8px 11px;border-radius:8px;font-weight:600;font-size:.9rem;white-space:nowrap}
+nav.main{display:flex;gap:2px;flex-wrap:nowrap}
+nav.main a{padding:8px 7px;border-radius:8px;font-weight:600;font-size:.86rem;white-space:nowrap}
 nav.main a:hover,nav.main a.active{background:var(--red);color:#fff}
 /* Muc Xe dien (VI + EN): gradient xanh kieu kinh pha le thay vi do */
 nav.main a:is([href="/xe-dien/"],[href="/en/honda-electric-scooters/"],[href="/en/honda-icon-e/"]):is(:hover,.active){
@@ -47,12 +47,8 @@ nav.main a:is([href="/xe-dien/"],[href="/en/honda-electric-scooters/"],[href="/e
 .lang svg{width:14px;height:14px;fill:currentColor}
 .lang:hover{border-color:var(--red);color:var(--red)}
 /* Tablet: chi giu hinh logo de menu 7 muc khong tran dong */
-/* Header rong hon noi dung (1280px) de menu du cho ten chi nhanh dai tren mot hang */
-.topbar .container,header.site .container{max-width:1280px}
-nav.main{flex-wrap:nowrap;margin-left:16px}
-@media(min-width:861px) and (max-width:1300px){.logo-tx{display:none}}
-@media(min-width:861px) and (max-width:1080px){nav.main{gap:2px}nav.main a{padding:8px 9px;font-size:.86rem}}
-@media(min-width:861px) and (max-width:1000px){nav.main{gap:0}nav.main a{padding:7px 5px;font-size:.76rem}}
+@media(min-width:861px) and (max-width:1100px){.logo-tx{display:none}}
+@media(min-width:861px) and (max-width:920px){nav.main a{padding:7px 6px;font-size:.82rem}}
 
 /* Hero */
 .hero{background:var(--grad-brand);color:#fff;padding:56px 0}
@@ -277,7 +273,7 @@ table.hours th{background:var(--bg-soft)}
   .logo-tx{padding-left:10px}
   .logo-tx strong{font-size:.98rem}
   .logo-tx small{font-size:.6rem}
-  nav.main{margin-left:0;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;
+  nav.main{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;
     -webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0 14px 8px;
     -webkit-mask-image:linear-gradient(90deg,#000 90%,transparent);
     mask-image:linear-gradient(90deg,#000 90%,transparent)}
